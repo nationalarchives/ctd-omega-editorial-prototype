@@ -1,0 +1,54 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Browse Edit Set – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<!--
+  <div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+  </div>
+  -->
+{% endblock %}
+
+{% block content %}
+
+
+<table class="govuk-table">
+  <caption class="govuk-table__caption govuk-table__caption--m">Edit set: COAL 80 Sample</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header app-custom-class">CCR</th>
+      <th scope="col" class="govuk-table__header app-custom-class">Scope and Content</th>
+      <th scope="col" class="govuk-table__header app-custom-class">Covering Dates</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="/edit-record" class="govuk-link--no-visited-state">COAL 80/80/1</a></th>
+      <td class="govuk-table__cell">Bedlington Colliery, Newcastle Upon Tyne. Photograph depicting: view of pithead baths.</td>
+      <td class="govuk-table__cell">1960</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="/edit-record" class="govuk-link--no-visited-state">COAL 80/80/2</a></th>
+      <td class="govuk-table__cell">Bedlington Colliery, Newcastle Upon Tyne. Photograph depicting: view of pithead baths.</td>
+      <td class="govuk-table__cell">1960</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="/edit-record" class="govuk-link--no-visited-state">COAL 80/80/3</a></th>
+      <td class="govuk-table__cell">Bedlington Colliery, Newcastle Upon Tyne. Photograph depicting: view of pithead baths.</td>
+      <td class="govuk-table__cell">1960</td>
+    </tr>
+  </tbody>
+</table>
+
+
+{% endblock %}
