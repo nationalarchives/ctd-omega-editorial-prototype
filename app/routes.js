@@ -9,9 +9,9 @@ router.post('/edit-record-action', function (req, res) {
   var action = req.body.action;
 
   if(action == 'save'){
-    res.redirect('/edit-record-updated')
+    res.redirect('/confirmation-saved')
   } else {
-    res.redirect('/edit-set')
+    res.redirect('/confirmation-discarded')
   }
 
 })
