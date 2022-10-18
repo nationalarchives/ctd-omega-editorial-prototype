@@ -23,7 +23,7 @@ router.post('/login-post', function (req, res) {
   var password = req.session.data['password']
 
   // Check whether the variable matches a condition
-  if (username != '' && password != ''){
+  if (username == '1234' && password == '1234'){
     // Send user to next page
     res.redirect('/edit-set')
   } else {
