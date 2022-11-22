@@ -16,6 +16,34 @@ router.post('/edit-record-action', function (req, res) {
 
 })
 
+router.post('/edit-set-action', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var action = req.body.action;
+
+  if(action == 'add'){
+    res.redirect('/search')
+  } else if(action == 'edit') {
+    res.redirect('/edit-set-details')
+  } else {
+    res.redirect('/dashboard')
+  }
+
+})
+
+router.post('/dashboard-action', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var action = req.body.action;
+
+  if(action == 'add'){
+    res.redirect('/edit-set-details')
+  } else {
+    res.redirect('/dashboard')
+  }
+
+})
+
 router.post('/login-post', function (req, res) {
 
   // Make a variable and give it the value from 'how-many-balls'
