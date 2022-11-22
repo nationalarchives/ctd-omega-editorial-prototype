@@ -53,7 +53,7 @@ router.post('/login-post', function (req, res) {
   // Check whether the variable matches a condition
   if (username == '1234' && password == '1234'){
     // Send user to next page
-    res.redirect('/edit-set')
+    res.redirect('/dashboard')
   } else {
     // Send user to ineligible page
     res.redirect('/login-invalid')
