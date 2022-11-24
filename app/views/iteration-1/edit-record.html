@@ -1,7 +1,7 @@
-{% extends "layout_unbranded.html" %}
+{% extends "../layout_unbranded.html" %}
 
 {% block pageTitle %}
-  Browse Edit Set – {{ serviceName }} – GOV.UK Prototype Kit
+  Edit record
 {% endblock %}
 
 {% block beforeContent %}
@@ -17,23 +17,17 @@
     </p>
 </div>
 -->
-  <a class="govuk-back-link" href="/edit-set">Back to edit set (COAL 80 Sample)</a>
+  <a class="govuk-back-link" href="/iteration-1/edit-set ">Back to edit set (COAL 80 Sample)</a>
 {% endblock %}
 
 {% block content %}
-
-<div class="govuk-panel govuk-panel--confirmation">
-  <div class="govuk-panel__body">
-    Your changes have been saved.
-  </div>
-</div>
 
 <h1 class="govuk-heading-l">TNA reference: COAL 80/80/1</h1>
 <h2 class="govuk-heading-m">PAC-ID: COAL.2022.V5RJW.P Physical Record</h2>
 <p class="govuk-body">Series: National Coal Board and predecessors: Photographs</p>
 <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
-<form class="form" action="/edit-record-action" method="post">
+<form class="form" action="/iteration-1/edit-record-action" method="post">
 
 <fieldset class="govuk-fieldset">
   <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
@@ -52,7 +46,7 @@
 
   <div class="govuk-form-group">
     <label class="govuk-label" for="covering-dates">Covering dates (optional)</label>
-    <input class="govuk-input govuk-!-width-one-half" id="covering-dates" name="covering-dates" type="text" autocomplete="address-level2" value="1960" readonly="readonly"/>
+    <input class="govuk-input govuk-!-width-one-half" id="covering-dates" name="covering-dates" type="text" autocomplete="address-level2" value="1960" disabled="disabled"/>
   </div>
 
   <div class="govuk-form-group">
@@ -72,11 +66,11 @@
 </fieldset>
 
 <div class="govuk-button-group">
-  <button class="govuk-button" data-module="govuk-button">
+  <button class="govuk-button" data-module="govuk-button" name="action" value="save">
     Save changes
   </button>
 
-  <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  <button class="govuk-button govuk-button--secondary" data-module="govuk-button" name="action" value="discard">
     Discard changes
   </button>
 </div>

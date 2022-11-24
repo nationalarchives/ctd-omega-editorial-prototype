@@ -1,4 +1,4 @@
-{% extends "layout_unbranded.html" %}
+{% extends "../layout_unbranded.html" %}
 
 {% block pageTitle %}
   Edit record
@@ -22,14 +22,15 @@
 
 {% block content %}
 
-<div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
-  <div class="govuk-notification-banner__header">
-    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-      Changes discarded
-    </h2>
-  </div>
-  <div class="govuk-notification-banner__content">
-    <p class="govuk-notification-banner__heading">Any changes have been discarded. Showing last saved version.</p>
+<div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" data-module="govuk-error-summary">
+  <h2 class="govuk-error-summary__title" id="error-summary-title">
+    There is a problem
+  </h2>
+  <div class="govuk-error-summary__body">
+    <ul class="govuk-list govuk-error-summary__list">
+      <li>Something went wrong and your changes could not be saved. Sorry!</li>
+      <li>Error reference: [log number]</li>
+    </ul>
   </div>
 </div>
 
