@@ -1,0 +1,52 @@
+{% extends "../layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Edit record
+{% endblock %}
+
+{% block beforeContent %}
+<!--
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+    </p>
+</div>
+-->
+  <a class="govuk-back-link" href="/iteration-1/edit-set ">Back to edit set (COAL 80 Sample)</a>
+{% endblock %}
+
+{% block content %}
+
+<form class="form" action="#" method="post">
+
+<h1 class="govuk-heading-l">Creator names</h1>
+<ul class="govuk-list govuk-list--bullet">
+  <!-- <li>National Coal Board <button class="govuk-button govuk-button--secondary" data-module="govuk-button">Remove</button></li> -->
+  <li>National Coal Board [<a href="#">remove</a>]</li>
+  <li>British Railways [<a href="#">remove</a>]</li>
+</ul>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    Select creator
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published">British Broadcasting Corporation</option>
+    <option value="updated">Transport for London</option>
+    <option value="post office">Post Office</option>
+  </select>
+</div>
+<button class="govuk-button" data-module="govuk-button">
+  Add creator
+</button>
+
+</form>
+
+
+
+{% endblock %}
