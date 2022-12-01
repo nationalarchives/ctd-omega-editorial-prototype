@@ -26,3 +26,15 @@ $govuk-assets-path: '/govuk/assets/';
 .govuk-width-container {
    max-width: 70em;
 }
+
+.govuk-header {
+  background: #26262a;
+}
+
+.govuk-header__container {
+  border-bottom-color: #555;
+}
+
+.govuk-pagination__item--current {
+  background-color: #555;
+}

@@ -41,6 +41,14 @@ router.post('/iteration-1/login-post', function (req, res) {
 
 })
 
+router.post('/iteration-1/edit-set-action', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  //var action = req.body.action;
+  res.redirect('/iteration-1/edit-set')
+
+})
+
 
 // Iteration 2 start ##############################################
 
