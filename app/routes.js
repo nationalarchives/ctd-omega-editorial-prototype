@@ -13,7 +13,7 @@ router.post('/iteration-1/edit-record-action', function (req, res) {
   if(action == 'save'){
     res.redirect('/iteration-1/confirmation-saved')
   } else if(action == 'add-creator'){
-    res.redirect('/iteration-1/edit-record#select-creator')
+    res.redirect('/iteration-1/edit-record-add-creator')
   } else if(action == 'remove-creator'){
     res.redirect('/iteration-1/edit-record#select-creator')
   } else if(action == 'calculate'){
