@@ -1,0 +1,72 @@
+{% extends "../layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Browse Edit Set – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<!--
+  <div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+  </div>
+  -->
+{% endblock %}
+
+{% block content %}
+
+<form class="form" action="/iteration-2/dashboard-action" method="post">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-l">My edit sets</h1>
+    </div>
+  </div>
+
+  <table class="govuk-table">
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header app-custom-class">Name</th>
+        <th scope="col" class="govuk-table__header app-custom-class">Size</th>
+        <th scope="col" class="govuk-table__header app-custom-class">Created Date</th>
+        <th scope="col" class="govuk-table__header app-custom-class">Last Updated Date</th>
+        <th scope="col" class="govuk-table__header app-custom-class">Target Date</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="/iteration-2/edit-set" class="govuk-link--no-visited-state">My Edit Set 1</a></th>
+        <td class="govuk-table__cell">100</td>
+        <td class="govuk-table__cell">22 Nov 2022</td>
+        <td class="govuk-table__cell">22 Nov 2022</td>
+        <td class="govuk-table__cell">1 Dec 2022</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="/iteration-2/edit-set" class="govuk-link--no-visited-state">My Edit Set 2</a></th>
+        <td class="govuk-table__cell">100</td>
+        <td class="govuk-table__cell">22 Nov 2022</td>
+        <td class="govuk-table__cell">22 Nov 2022</td>
+        <td class="govuk-table__cell">1 Dec 2022</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="/iteration-2/edit-set" class="govuk-link--no-visited-state">My Edit Set 3</a></th>
+        <td class="govuk-table__cell">100</td>
+        <td class="govuk-table__cell">22 Nov 2022</td>
+        <td class="govuk-table__cell">22 Nov 2022</td>
+        <td class="govuk-table__cell">1 Dec 2022</td>
+      </tr>
+    </tbody>
+  </table>
+  <button class="govuk-button" data-module="govuk-button" name="action" value="add">
+    Add editset
+  </button>
+</form>
+
+
+{% endblock %}

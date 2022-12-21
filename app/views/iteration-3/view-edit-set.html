@@ -1,0 +1,109 @@
+{% extends "../layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Browse Edit Set – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+
+
+
+{% block content %}
+
+
+<h1 class="govuk-heading-l">Edit set: COAL 80 Sample</h1>
+<ul class="govuk-list na-subnav__edit govuk-!-margin-bottom-9">
+  <li><a class="govuk-link" href="null">Edit set details</a></li>
+  <li><a class="govuk-link" href="null">Add records to set</a></li>
+  <li><a class="govuk-link" href="null">Abandon record set</a></li>
+</ul>
+  <table class="govuk-table">
+    <caption class="govuk-table__caption govuk-table__caption--s">National Coal Board and Predecesessors: Photographs
+    <p class="govuk-body">Displaying 3 records</p></caption>
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header app-custom-class">Record</th>
+        <th scope="col" class="govuk-table__header app-custom-class">Scope and content</th>
+        <th scope="col" class="govuk-table__header app-custom-class">Covering dates</th>
+        <th scope="col" class="govuk-table__header app-custom-class">View record</th>
+
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item govuk-checkboxes--small">
+          <input class="govuk-checkboxes__input" id="pacid1" name="pacid1" type="checkbox" value="pacid1">
+          <label class="govuk-label govuk-checkboxes__label" for="pacid1">
+           CCR 1
+          </label>
+        </div>
+      </td>
+        <td class="govuk-table__cell">Scope and Content 1 (ignoring mark up)</td>
+        <td class="govuk-table__cell">Covering dates</td>
+        <td class="govuk-table__cell"><a class="govuk-link" href="null">View <span class="govuk-visually-hidden"> CCR1</span></a></td>
+       
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item govuk-checkboxes--small">
+          <input class="govuk-checkboxes__input" id="pacid1" name="pacid1" type="checkbox" value="pacid1">
+          <label class="govuk-label govuk-checkboxes__label" for="pacid1">
+           CCR 1
+          </label>
+        </div>
+      </td>
+        <td class="govuk-table__cell">Scope and Content 2 (ignoring mark up)</td>
+        <td class="govuk-table__cell">Covering dates</td>
+        <td class="govuk-table__cell"><a class="govuk-link" href="null">View <span class="govuk-visually-hidden"> CCR2</span></a></td>
+       
+
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item govuk-checkboxes--small">
+          <input class="govuk-checkboxes__input" id="pacid1" name="pacid1" type="checkbox" value="pacid1">
+          <label class="govuk-label govuk-checkboxes__label" for="pacid1">
+           CCR 1
+          </label>
+        </div>
+      </td>
+        <td class="govuk-table__cell">Scope and Content 3 (ignoring mark up)</td>
+        <td class="govuk-table__cell">Covering dates</td>
+        <td class="govuk-table__cell"><a class="govuk-link" href="null">View <span class="govuk-visually-hidden"> CCR3</span></a></td>
+       
+     
+      </tr>
+    </tbody>
+  </table>
+
+  {% from "govuk/components/pagination/macro.njk" import govukPagination %}
+{{ govukPagination({
+  previous: {
+    href: "#"
+  },
+  next: {
+    href: "#"
+  },
+  items: [
+    {
+      number: 1,
+      href: "#"
+    },
+    {
+      number: 2,
+      current: true,
+      href: "#"
+    },
+    {
+      number: 3,
+      href: "#"
+    }
+  ]
+}) }}
+
+  {% from "govuk/components/button/macro.njk" import govukButton %}
+{{ govukButton({
+  text: "Remove selected records"
+}) }}
+
+{% endblock %}
