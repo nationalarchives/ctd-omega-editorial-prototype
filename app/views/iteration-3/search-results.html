@@ -34,7 +34,7 @@
       </td>
         <td class="govuk-table__cell govuk-!-padding-top-4">Classic Catalogue Reference</td>
         <td class="govuk-table__cell govuk-!-padding-top-4">Scope and content</td>
-        <td class="govuk-table__cell govuk-!-padding-top-4">Covering dates</td>
+        <td class="govuk-table__cell govuk-!-padding-top-4">1960 - 1961</td>
        
       </tr>
       <tr class="govuk-table__row">
@@ -49,7 +49,7 @@
       
       <td class="govuk-table__cell govuk-!-padding-top-4">Classic Catalogue Reference</td>
       <td class="govuk-table__cell govuk-!-padding-top-4">Scope and content</td>
-      <td class="govuk-table__cell govuk-!-padding-top-4">Covering dates</td>
+      <td class="govuk-table__cell govuk-!-padding-top-4">1960 - 1961</td>
 
       </tr>
       <tr class="govuk-table__row">
@@ -63,7 +63,7 @@
       </td>
       <td class="govuk-table__cell govuk-!-padding-top-4">Classic Catalogue Reference</td>
       <td class="govuk-table__cell govuk-!-padding-top-4">Scope and content</td>
-      <td class="govuk-table__cell govuk-!-padding-top-4">Covering dates</td>
+      <td class="govuk-table__cell govuk-!-padding-top-4">1960 - 1961</td>
      
       </tr>
     </tbody>
@@ -75,32 +75,33 @@
   id: "sort",
   name: "sort",
   label: {
-    text: "Add to"
+    text: "Add to edit set"
   },
   items: [
     {
       value: "newset",
-      text: "New record set"
-    },
-    {
-      value: "recordset1",
-      text: "Record set A",
+      text: "New set",
       selected: true
     },
     {
-      value: "recordset2",
-      text: "Record set B"
+      value: "editset1",
+      text: "Set A"
+     
     },
     {
-      value: "recordset3",
-      text: "Record set 3"
+      value: "editset2",
+      text: "Set B"
+    },
+    {
+      value: "editset3",
+      text: "Set 3"
     }
   ]
 }) }}
 
   {% from "govuk/components/button/macro.njk" import govukButton %}
 {{ govukButton({
-  text: "Add to record set"
+  text: "Add to edit set"
 }) }}
 
 {% endblock %}
