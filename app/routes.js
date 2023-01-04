@@ -16,7 +16,7 @@ router.post('/iteration-1/edit-record-action', function (req, res) {
     res.redirect('/iteration-1/edit-record-add-creator')
   } else if(action == 'remove-creator'){
     res.redirect('/iteration-1/edit-record#select-creator')
-  } else if(action == 'calculate'){
+  } else if(action == 'calculateDates'){
     res.redirect('/iteration-1/edit-record#covering-dates')
   } else {
     res.redirect('/iteration-1/confirmation-discarded')
