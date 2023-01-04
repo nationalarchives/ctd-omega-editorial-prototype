@@ -38,3 +38,41 @@ $govuk-assets-path: '/govuk/assets/';
 .govuk-pagination__item--current {
   background-color: #555;
 }
+
+
+.na-search__form {
+  align-items: flex-end;
+    display: flex;
+    max-width: 55%;
+}
+
+
+
+.na-search__group {
+  display: inline-block;
+    flex: 1;
+    margin-bottom: 0;
+    vertical-align: top;
+}
+
+.na-search__button {
+  display: inline-block;
+    margin-bottom: 0;
+    margin-left: 10px;
+    position: relative;
+    top: -2px;
+    vertical-align: bottom;
+    width: auto;
+
+}
+
+.govuk-list.na-subnav__edit {
+  display:block;
+  text-align:right;
+}
+
+.na-subnav__edit li {
+ display:inline-block;
+ margin-right:25px;
+ text-align:right;
+}

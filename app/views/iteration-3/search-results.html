@@ -1,0 +1,107 @@
+{% extends "../layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Browse Edit Set – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+
+
+
+{% block content %}
+
+
+
+
+  <table class="govuk-table">
+    <caption class="govuk-table__caption govuk-table__caption--m"><h1 class="govuk-heading-l">Search results</h1></caption>
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header app-custom-class">PAC-ID</th>
+        <th scope="col" class="govuk-table__header app-custom-class">Classic Catalogue Reference</th>
+        <th scope="col" class="govuk-table__header app-custom-class">Scope and content</th>
+        <th scope="col" class="govuk-table__header app-custom-class">Covering dates</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item govuk-checkboxes--small">
+          <input class="govuk-checkboxes__input" id="pacid1" name="pacid1" type="checkbox" value="pacid1">
+          <label class="govuk-label govuk-checkboxes__label" for="pacid1">
+           PAC-ID 1
+          </label>
+        </div>
+      </td>
+        <td class="govuk-table__cell govuk-!-padding-top-4">Classic Catalogue Reference</td>
+        <td class="govuk-table__cell govuk-!-padding-top-4">Scope and content</td>
+        <td class="govuk-table__cell govuk-!-padding-top-4">1960 - 1961</td>
+       
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item govuk-checkboxes--small">
+          <input class="govuk-checkboxes__input" id="pacid2" name="pacid2" type="checkbox" value="pacid2">
+          <label class="govuk-label govuk-checkboxes__label" for="pacid2">
+           PAC-ID 2
+          </label>
+        </div>
+      </td>
+      
+      <td class="govuk-table__cell govuk-!-padding-top-4">Classic Catalogue Reference</td>
+      <td class="govuk-table__cell govuk-!-padding-top-4">Scope and content</td>
+      <td class="govuk-table__cell govuk-!-padding-top-4">1960 - 1961</td>
+
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item govuk-checkboxes--small">
+          <input class="govuk-checkboxes__input" id="pacid3" name="pacid3" type="checkbox" value="pacid3">
+          <label class="govuk-label govuk-checkboxes__label" for="pacid3">
+           PAC-ID 3
+          </label>
+        </div>
+      </td>
+      <td class="govuk-table__cell govuk-!-padding-top-4">Classic Catalogue Reference</td>
+      <td class="govuk-table__cell govuk-!-padding-top-4">Scope and content</td>
+      <td class="govuk-table__cell govuk-!-padding-top-4">1960 - 1961</td>
+     
+      </tr>
+    </tbody>
+  </table>
+
+
+  {% from "govuk/components/select/macro.njk" import govukSelect %}
+{{ govukSelect({
+  id: "sort",
+  name: "sort",
+  label: {
+    text: "Add to edit set"
+  },
+  items: [
+    {
+      value: "newset",
+      text: "New set",
+      selected: true
+    },
+    {
+      value: "editset1",
+      text: "Set A"
+     
+    },
+    {
+      value: "editset2",
+      text: "Set B"
+    },
+    {
+      value: "editset3",
+      text: "Set 3"
+    }
+  ]
+}) }}
+
+  {% from "govuk/components/button/macro.njk" import govukButton %}
+{{ govukButton({
+  text: "Add to edit set"
+}) }}
+
+{% endblock %}
