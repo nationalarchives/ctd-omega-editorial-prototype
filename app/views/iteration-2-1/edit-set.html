@@ -23,7 +23,9 @@
 
 <form class="form" action="/iteration-2/edit-set-action" method="post">
 
-  <div class="govuk-grid-row">
+
+
+  <!-- <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
       <h1 class="govuk-heading-l">Edit set: COAL 80 Sample</h1>
       <p class="govuk-body-l">3 Records</p>
@@ -35,13 +37,82 @@
     </div>
   </div>
 
+-->
+
+  <form class="form" action="/iteration-1/edit-set-action" method="post">
+   
+   
+    
+
+  {% from "govuk/components/select/macro.njk" import govukSelect %}
+{{ govukSelect({
+  id: "ordering",
+  name: "ordering",
+  classes: "govuk-!-display-inline",
+  label: {
+    text: "Ordering"
+  },
+  items: [
+    {
+      value: "CCR",
+      text: "CCR"
+    },
+    {
+      value: "Scope and Content",
+      text: "Scope and Content"
+    },
+    {
+      value: "Covering Dates",
+      text: "Covering Dates"
+    }
+  ]
+}) }}
+
+
+
+{% from "govuk/components/select/macro.njk" import govukSelect %}
+{{ govukSelect({
+  id: "ascdec",
+  name: "ascdec",
+  classes: "govuk-!-display-inline",
+  label: {
+    text: "Ascending or decending"
+  },
+  items: [
+    {
+      value: "Ascending",
+      text: "Ascending"
+    },
+    {
+      value: "Descending",
+      text: "Descending"
+    
+    }
+  
+  ]
+}) }}
+
+
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{{ govukButton({
+  classes: "govuk-!-display-inline",
+  text: "Apply"
+}) }}
+
+
+
+
+
+</form>
+
   <table class="govuk-table">
     <thead class="govuk-table__head">
       <tr class="govuk-table__row">
         <th scope="col" class="govuk-table__header app-custom-class">CCR</th>
         <th scope="col" class="govuk-table__header app-custom-class">Scope and Content</th>
         <th scope="col" class="govuk-table__header app-custom-class">Covering Dates</th>
-        <th scope="col" class="govuk-table__header app-custom-class"/>
+      
       </tr>
     </thead>
     <tbody class="govuk-table__body">
