@@ -21,52 +21,86 @@
 
 {% block content %}
 
-<form class="form" action="/iteration-2/dashboard-action" method="post">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+<form class="form" action="/iteration-2-1/abandon-edit-sets" method="post">
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-      <h1 class="govuk-heading-l">My edit sets</h1>
+      <h1 class="govuk-heading-l">My Edit Sets</h1>
     </div>
   </div>
+  <ul class="govuk-list na-subnav__edit govuk-!-margin-bottom-9">
+    <li><a class="govuk-link" href="search">Add to new or existing Edit Set</a></li>
+  </ul>
 
   <table class="govuk-table">
     <thead class="govuk-table__head">
       <tr class="govuk-table__row">
-        <th scope="col" class="govuk-table__header app-custom-class">Name</th>
+        <th scope="col" class="govuk-table__header app-custom-class">Edit Set Name</th>
         <th scope="col" class="govuk-table__header app-custom-class">Size</th>
-        <th scope="col" class="govuk-table__header app-custom-class">Created Date</th>
-        <th scope="col" class="govuk-table__header app-custom-class">Last Updated Date</th>
-        <th scope="col" class="govuk-table__header app-custom-class">Target Date</th>
+        <th scope="col" class="govuk-table__header app-custom-class">Created</th>
+        <th scope="col" class="govuk-table__header app-custom-class">Updated</th>
+        <th scope="col" class="govuk-table__header app-custom-class">Action</th>
       </tr>
     </thead>
     <tbody class="govuk-table__body">
       <tr class="govuk-table__row">
-        <th scope="row" class="govuk-table__header"><a href="/iteration-2/edit-set" class="govuk-link--no-visited-state">My Edit Set 1</a></th>
-        <td class="govuk-table__cell">100</td>
-        <td class="govuk-table__cell">22 Nov 2022</td>
-        <td class="govuk-table__cell">22 Nov 2022</td>
-        <td class="govuk-table__cell">1 Dec 2022</td>
+        <th scope="row" class="govuk-table__header">
+          <div class="govuk-checkboxes__item govuk-checkboxes--small">
+            <input class="govuk-checkboxes__input" id="pacid1" name="pacid1" type="checkbox" value="pacid1">
+            <label class="govuk-label govuk-checkboxes__label" for="pacid1">
+             COAL 80 Sample
+            </label>
+          </div>
+         </th>
+        <td class="govuk-table__cell">3</td>
+        <td class="govuk-table__cell">22 Oct 2022</td>
+        <td class="govuk-table__cell">10 Nov 2022 13:04</td>
+        <td class="govuk-table__cell"><a class="govuk-link" href="edit-set-details">Modify</a></td>
+       
       </tr>
       <tr class="govuk-table__row">
-        <th scope="row" class="govuk-table__header"><a href="/iteration-2/edit-set" class="govuk-link--no-visited-state">My Edit Set 2</a></th>
-        <td class="govuk-table__cell">100</td>
-        <td class="govuk-table__cell">22 Nov 2022</td>
-        <td class="govuk-table__cell">22 Nov 2022</td>
-        <td class="govuk-table__cell">1 Dec 2022</td>
+        <th scope="row" class="govuk-table__header">
+          <div class="govuk-checkboxes__item govuk-checkboxes--small">
+            <input class="govuk-checkboxes__input" id="pacid1" name="pacid1" type="checkbox" value="pacid1">
+            <label class="govuk-label govuk-checkboxes__label" for="pacid1">
+            CAB New Year's Openings
+            </label>
+          </div>
+          </th>
+          
+        <td class="govuk-table__cell">107</td>
+        <td class="govuk-table__cell">10 Nov 2022</td>
+        <td class="govuk-table__cell">11 Nov 2022 11:52</td>
+        <td class="govuk-table__cell"><a class="govuk-link" href="edit-set-details">Modify</a></td>
+       
       </tr>
       <tr class="govuk-table__row">
-        <th scope="row" class="govuk-table__header"><a href="/iteration-2/edit-set" class="govuk-link--no-visited-state">My Edit Set 3</a></th>
-        <td class="govuk-table__cell">100</td>
-        <td class="govuk-table__cell">22 Nov 2022</td>
-        <td class="govuk-table__cell">22 Nov 2022</td>
-        <td class="govuk-table__cell">1 Dec 2022</td>
+        <th scope="row" class="govuk-table__header">
+          <div class="govuk-checkboxes__item govuk-checkboxes--small">
+            <input class="govuk-checkboxes__input" id="pacid1" name="pacid1" type="checkbox" value="pacid1">
+            <label class="govuk-label govuk-checkboxes__label" for="pacid1">
+              FCO 105/1-1000
+            </label>
+          </div>
+         
+          </th>
+        <td class="govuk-table__cell">1002</td>
+        <td class="govuk-table__cell">14 Dec 2022</td>
+        <td class="govuk-table__cell">3 Jan 2023 16:36</td>
+        <td class="govuk-table__cell"><a class="govuk-link" href="edit-set-details">Modify</a></td>
+    
       </tr>
     </tbody>
   </table>
   <button class="govuk-button" data-module="govuk-button" name="action" value="add">
-    Add editset
+    Abandon Edit Set
   </button>
 </form>
+</div>
+</div>
 
 
 {% endblock %}

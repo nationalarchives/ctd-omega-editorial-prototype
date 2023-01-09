@@ -10,15 +10,18 @@
 {% block content %}
 
 
-
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
 
   <table class="govuk-table">
-    <caption class="govuk-table__caption govuk-table__caption--m"><h1 class="govuk-heading-l">Search results</h1></caption>
+    <caption class="govuk-table__caption govuk-table__caption--m">
+      <span class="govuk-caption-l">Add to Edit Set</span>
+      <h1 class="govuk-heading-l">Search results</h1></caption>
     <thead class="govuk-table__head">
       <tr class="govuk-table__row">
-        <th scope="col" class="govuk-table__header app-custom-class">PAC-ID</th>
-        <th scope="col" class="govuk-table__header app-custom-class">Classic Catalogue Reference</th>
-        <th scope="col" class="govuk-table__header app-custom-class">Scope and content</th>
+        <th scope="col" class="govuk-table__header app-custom-class">Record</th>
+        <th scope="col" class="govuk-table__header app-custom-class">CCR</th>
+        <th scope="col" class="govuk-table__header app-custom-class">Description</th>
         <th scope="col" class="govuk-table__header app-custom-class">Covering dates</th>
       </tr>
     </thead>
@@ -32,9 +35,9 @@
           </label>
         </div>
       </td>
-        <td class="govuk-table__cell govuk-!-padding-top-4">Classic Catalogue Reference</td>
-        <td class="govuk-table__cell govuk-!-padding-top-4">Scope and content</td>
-        <td class="govuk-table__cell govuk-!-padding-top-4">1960 - 1961</td>
+        <td class="govuk-table__cell govuk-!-padding-top-4">COAL 80/80/1</td>
+        <td class="govuk-table__cell govuk-!-padding-top-4">Bedlington colliery, Newcastle Upon Tyne, Photograph depicting: view of pithead baths.</td>
+        <td class="govuk-table__cell govuk-!-padding-top-4">1960</td>
        
       </tr>
       <tr class="govuk-table__row">
@@ -47,9 +50,9 @@
         </div>
       </td>
       
-      <td class="govuk-table__cell govuk-!-padding-top-4">Classic Catalogue Reference</td>
-      <td class="govuk-table__cell govuk-!-padding-top-4">Scope and content</td>
-      <td class="govuk-table__cell govuk-!-padding-top-4">1960 - 1961</td>
+      <td class="govuk-table__cell govuk-!-padding-top-4">COAL 80/80/2</td>
+      <td class="govuk-table__cell govuk-!-padding-top-4">Bedlington colliery, Newcastle Upon Tyne, Photograph depicting: view of pithead baths.</td>
+      <td class="govuk-table__cell govuk-!-padding-top-4">1960</td>
 
       </tr>
       <tr class="govuk-table__row">
@@ -61,47 +64,50 @@
           </label>
         </div>
       </td>
-      <td class="govuk-table__cell govuk-!-padding-top-4">Classic Catalogue Reference</td>
-      <td class="govuk-table__cell govuk-!-padding-top-4">Scope and content</td>
-      <td class="govuk-table__cell govuk-!-padding-top-4">1960 - 1961</td>
+      <td class="govuk-table__cell govuk-!-padding-top-4">COAL 80/80/3</td>
+      <td class="govuk-table__cell govuk-!-padding-top-4">Bedlington colliery, Newcastle Upon Tyne, Photograph depicting: view of pithead baths.</td>
+      <td class="govuk-table__cell govuk-!-padding-top-4">1960</td>
      
       </tr>
     </tbody>
   </table>
 
-
+  <form class="form" action="edit-set-details" method="post">
   {% from "govuk/components/select/macro.njk" import govukSelect %}
 {{ govukSelect({
   id: "sort",
   name: "sort",
   label: {
-    text: "Add to edit set"
+    text: "Add to Edit Set"
   },
   items: [
     {
       value: "newset",
-      text: "New set",
+      text: "New Edit Set",
       selected: true
     },
     {
       value: "editset1",
-      text: "Set A"
+      text: "COAL 80 Sample"
      
     },
     {
       value: "editset2",
-      text: "Set B"
+      text: "CAB New Year's Openings"
     },
     {
       value: "editset3",
-      text: "Set 3"
+      text: "FCO 105/1-75"
     }
   ]
 }) }}
 
   {% from "govuk/components/button/macro.njk" import govukButton %}
 {{ govukButton({
-  text: "Add to edit set"
+  text: "Add to Edit Set"
 }) }}
 
 {% endblock %}
+</form>
+</div>
+</div>

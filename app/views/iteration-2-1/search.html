@@ -21,18 +21,22 @@
 
 {% block content %}
 
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
 <div class="moj-search">
 
-  <form action="#"  class="na-search__form" method="post">
+  <form action="search-results" class="na-search__form" method="post">
 
     <div class="govuk-form-group na-search__group">
+      <span class="govuk-caption-l">Add to Edit Set</span>
       <label class="govuk-label na-search__label" for="search">
        <h1 class="govuk-heading-l">Search the records</h1>
       </label>
 
-      <div id="search-hint" class="govuk-hint na-search__hint">
+     <!-- <div id="search-hint" class="govuk-hint na-search__hint">
        Some help text here
-      </div>
+      </div> -->
 
       <input class="govuk-input na-search__input" id="search" name="search" type="search" aria-describedby="search-hint">
 
@@ -43,6 +47,8 @@
     </button>
 
   </form>
+</div>
+</div>
 </div>
 
 
