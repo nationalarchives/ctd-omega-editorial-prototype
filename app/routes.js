@@ -50,54 +50,15 @@ router.post('/iteration-1/edit-set-action', function (req, res) {
 })
 
 
+
 // Iteration 2 start ##############################################
 
 // Add your routes here - above the module.exports line
 // Run this code when a form is submitted to 'juggling-balls-answer'
-router.post('iteration-2-1/edit-record-action', function (req, res) {
-
-  // Make a variable and give it the value from 'how-many-balls'
-  var action = req.body.action;
-
-  if(action == 'save'){
-    res.redirect('/iteration-2-1/confirmation-saved')
-  } else {
-    res.redirect('/iteration-2/-1/confirmation-discarded')
-  }
-
-})
-
-router.post('/iteration-2-1/edit-set-action', function (req, res) {
-
-  // Make a variable and give it the value from 'how-many-balls'
-  var action = req.body.action;
-
-  if(action == 'add'){
-    res.redirect('/iteration-2-1/search')
-  } else if(action == 'edit') {
-    res.redirect('/iteration-2-1//edit-set-details')
-  } else {
-    res.redirect('/iteration-2-1//dashboard')
-  }
-
-})
-
-router.post('/iteration-2-1/dashboard-action', function (req, res) {
-
-  // Make a variable and give it the value from 'how-many-balls'
-  var action = req.body.action;
-
-  if(action == 'add'){
-    res.redirect('/iteration-2-1/edit-set-details')
-  } else {
-    res.redirect('iteration-2-1/dashboard')
-  }
-
-})
 
 
 
-router.post('/iteration-2-1/login-post', function (req, res) {
+router.post('/iteration-2/login-post', function (req, res) {
 
   // Make a variable and give it the value from 'how-many-balls'
   var username = req.session.data['username']
@@ -113,6 +74,49 @@ router.post('/iteration-2-1/login-post', function (req, res) {
   }
 
 })
+
+router.post('/iteration-2/edit-record-action', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var action = req.body.action;
+
+  if(action == 'save'){
+    res.redirect('/iteration-2/confirmation-saved')
+  } else {
+    res.redirect('/iteration-2/confirmation-discarded')
+  }
+
+})
+
+router.post('/iteration-2/edit-set-action', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var action = req.body.action;
+
+  if(action == 'add'){
+    res.redirect('/iteration-2/search')
+  } else if(action == 'edit') {
+    res.redirect('/iteration-2/edit-set-details')
+  } else {
+    res.redirect('/iteration-2/dashboard')
+  }
+
+})
+
+router.post('/iteration-2/dashboard-action', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var action = req.body.action;
+
+  if(action == 'add'){
+    res.redirect('/iteration-2/edit-set-details')
+  } else {
+    res.redirect('iteration-2/dashboard')
+  }
+
+})
+
+
 
 
 // Iteration 2-1
@@ -142,7 +146,7 @@ router.post('/iteration-2-1/dashboard-action', function (req, res) {
   if(action == 'add'){
     res.redirect('/iteration-2-1/search')
   } else {
-    res.redirect('iteration-2/dashboard')
+    res.redirect('iteration-2-1/dashboard')
   }
 
 })
@@ -151,7 +155,7 @@ router.post('/iteration-2-1/edit-set-action', function (req, res) {
 
   // Make a variable and give it the value from 'how-many-balls'
   //var action = req.body.action;
-  res.redirect('/iteration-1/edit-set')
+  res.redirect('/iteration-2-1/edit-set')
 
 })
 
