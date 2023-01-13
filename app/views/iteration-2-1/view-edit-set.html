@@ -10,21 +10,24 @@
 {% block content %}
 
 
-<h1 class="govuk-heading-l">Edit set: COAL 80 Sample</h1>
+<h1 class="govuk-heading-l">Edit Set: COAL 80 Sample</h1>
 <ul class="govuk-list na-subnav__edit govuk-!-margin-bottom-9">
-  <li><a class="govuk-link" href="edit-set-details">Edit set details</a></li>
-  <li><a class="govuk-link" href="search">Add records to set</a></li>
-  <li><a class="govuk-link" href="null">Abandon record set</a></li>
+  <li><a class="govuk-link" href="dashboard">Dashboard</a></li>
+  <li><a class="govuk-link" href="edit-set-details">Modify Edit Set</a></li>
+  <li><a class="govuk-link" href="search">Add to Edit Set</a></li>
+  <li><a class="govuk-link" href="abandon-edit-sets">Abandon Edit Set</a></li>
 </ul>
+
+<form class="form" action="/iteration-2-1/remove-records" method="post">
   <table class="govuk-table" data-module="moj-sortable-table">
     <caption class="govuk-table__caption govuk-table__caption--s">National Coal Board and Predecesessors: Photographs
     <p class="govuk-body">Displaying 3 records</p></caption>
     <thead class="govuk-table__head">
       <tr class="govuk-table__row">
-        <th scope="col" class="govuk-table__header app-custom-class" aria-sort="ascending">Record</th>
-        <th scope="col" class="govuk-table__header app-custom-class" aria-sort="ascending">Scope and content</th>
+        <th scope="col" class="govuk-table__header app-custom-class" aria-sort="ascending">CCR</th>
+        <th scope="col" class="govuk-table__header app-custom-class" aria-sort="ascending">Description</th>
         <th scope="col" class="govuk-table__header app-custom-class" aria-sort="ascending">Covering dates</th>
-        <th scope="col" class="govuk-table__header app-custom-class" aria-sort="ascending">View record</th>
+        <th scope="col" class="govuk-table__header app-custom-class" aria-sort="ascending">Action</th>
 
       </tr>
     </thead>
@@ -34,13 +37,13 @@
           <div class="govuk-checkboxes__item govuk-checkboxes--small">
           <input class="govuk-checkboxes__input" id="pacid1" name="pacid1" type="checkbox" value="pacid1">
           <label class="govuk-label govuk-checkboxes__label" for="pacid1">
-           CCR 1
+           COAL 80/80/1
           </label>
         </div>
       </td>
-        <td class="govuk-table__cell govuk-!-padding-top-4">Scope and Content 1 (ignoring mark up)</td>
-        <td class="govuk-table__cell govuk-!-padding-top-4">1959 - 1961</td>
-        <td class="govuk-table__cell govuk-!-padding-top-4"><a class="govuk-link" href="null">View <span class="govuk-visually-hidden"> CCR1</span></a></td>
+        <td class="govuk-table__cell govuk-!-padding-top-4">Bedlington colliery, Newcastle Upon Tyne, Photograph depicting: view of pithead baths.</td>
+        <td class="govuk-table__cell govuk-!-padding-top-4">1960</td>
+        <td class="govuk-table__cell govuk-!-padding-top-4"><a class="govuk-link" href="edit-record">Edit <span class="govuk-visually-hidden"> CCR1</span></a></td>
        
       </tr>
       <tr class="govuk-table__row">
@@ -48,13 +51,14 @@
           <div class="govuk-checkboxes__item govuk-checkboxes--small">
           <input class="govuk-checkboxes__input" id="pacid1" name="pacid1" type="checkbox" value="pacid1">
           <label class="govuk-label govuk-checkboxes__label" for="pacid1">
-           CCR 1
+          COAL 80/80/2
           </label>
         </div>
       </td>
-        <td class="govuk-table__cell govuk-!-padding-top-4">Scope and Content 2 (ignoring mark up)</td>
-        <td class="govuk-table__cell govuk-!-padding-top-4">1960 3 Feb - 1960 8 Oct</td>
-        <td class="govuk-table__cell govuk-!-padding-top-4"><a class="govuk-link" href="null">View <span class="govuk-visually-hidden"> CCR2</span></a></td>
+        <td class="govuk-table__cell govuk-!-padding-top-4">Bedlington colliery, Newcastle Upon Tyne, Photograph depicting: view of pithead baths.</td>
+        <td class="govuk-table__cell govuk-!-padding-top-4">1961
+        </td>
+        <td class="govuk-table__cell govuk-!-padding-top-4"><a class="govuk-link" href="edit-record">Edit <span class="govuk-visually-hidden"> CCR2</span></a></td>
        
 
       </tr>
@@ -63,47 +67,26 @@
           <div class="govuk-checkboxes__item govuk-checkboxes--small">
           <input class="govuk-checkboxes__input" id="pacid1" name="pacid1" type="checkbox" value="pacid1">
           <label class="govuk-label govuk-checkboxes__label" for="pacid1">
-           CCR 1
+          COAL 80/80/3
           </label>
         </div>
       </td>
-        <td class="govuk-table__cell govuk-!-padding-top-4">Scope and Content 3 (ignoring mark up)</td>
-        <td class="govuk-table__cell govuk-!-padding-top-4">1960</td>
-        <td class="govuk-table__cell govuk-!-padding-top-4"><a class="govuk-link" href="null">View <span class="govuk-visually-hidden"> CCR3</span></a></td>
+        <td class="govuk-table__cell govuk-!-padding-top-4">Bedlington colliery, Newcastle Upon Tyne, Photograph depicting: view of pithead baths.</td>
+        <td class="govuk-table__cell govuk-!-padding-top-4">1962</td>
+        <td class="govuk-table__cell govuk-!-padding-top-4"><a class="govuk-link" href="edit-record">Edit <span class="govuk-visually-hidden"> CCR3</span></a></td>
        
      
       </tr>
     </tbody>
   </table>
 
-  {% from "govuk/components/pagination/macro.njk" import govukPagination %}
-{{ govukPagination({
-  previous: {
-    href: "#"
-  },
-  next: {
-    href: "#"
-  },
-  items: [
-    {
-      number: 1,
-      href: "#"
-    },
-    {
-      number: 2,
-      current: true,
-      href: "#"
-    },
-    {
-      number: 3,
-      href: "#"
-    }
-  ]
-}) }}
+
 
   {% from "govuk/components/button/macro.njk" import govukButton %}
 {{ govukButton({
-  text: "Remove selected records"
+  text: "Remove selected Records"
 }) }}
+
+</form>
 
 {% endblock %}
