@@ -133,7 +133,7 @@ router.post('/iteration-2-1/login-post', function (req, res) {
     res.redirect('/iteration-2-1/dashboard')
   } else {
     // Send user to ineligible page
-    res.redirect('/iteration-2/login-invalid')
+    res.redirect('/iteration-2-1/login-invalid')
   }
 
 })
