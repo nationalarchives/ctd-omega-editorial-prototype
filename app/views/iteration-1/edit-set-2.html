@@ -1,0 +1,95 @@
+{% extends "../layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Browse Edit Set – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<!--
+  <div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+  </div>
+  -->
+{% endblock %}
+
+{% block content %}
+
+<h1 class="govuk-heading-l">Edit set: COAL 80 Sample</h1>
+
+<form class="form" action="/iteration-1/edit-set-action" method="post">
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Ordering:
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="published" selected="selected">CCR</option>
+      <option value="updated">Scope and Content</option>
+      <option value="views">Covering Dates</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="ascending" selected="selected">Ascending</option>
+      <option value="descending">Descending</option>
+    </select>
+  </div>
+  <button class="govuk-button" data-module="govuk-button" name="action" value="order">
+    Sort edit set
+  </button>
+</form>
+
+<table class="govuk-table">
+  <caption class="govuk-table__caption">Showing 11 - 12 of 12 records</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header app-custom-class">CCR</th>
+      <th scope="col" class="govuk-table__header app-custom-class">Scope and Content</th>
+      <th scope="col" class="govuk-table__header app-custom-class">Covering Dates</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="/iteration-1/edit-record" class="govuk-link--no-visited-state">COAL 80/80/11</a></th>
+      <td class="govuk-table__cell">Bedlington Colliery, Newcastle Upon Tyne. Photograph depicting: view of pithead baths.</td>
+      <td class="govuk-table__cell">1960</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="/iteration-1/edit-record" class="govuk-link--no-visited-state">COAL 80/80/12</a></th>
+      <td class="govuk-table__cell">Bedlington Colliery, Newcastle Upon Tyne. Photograph depicting: view of pithead baths.</td>
+      <td class="govuk-table__cell">1960</td>
+    </tr>
+  </tbody>
+</table>
+
+<nav class="govuk-pagination" role="navigation" aria-label="results">
+  <div class="govuk-pagination__prev">
+    <a class="govuk-link govuk-pagination__link" href="/iteration-1/edit-set.html" rel="prev">
+      <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+        <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+      </svg>
+      <span class="govuk-pagination__link-title">Previous</span></a>
+  </div>
+  <ul class="govuk-pagination__list">
+    <li class="govuk-pagination__item">
+      <a class="govuk-link govuk-pagination__link" href="/iteration-1/edit-set.html" aria-label="Page 1" aria-current="page">
+        1
+      </a>
+    </li>
+    <li class="govuk-pagination__item govuk-pagination__item--current">
+      <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2">
+        2
+      </a>
+    </li>
+  </ul>
+</nav>
+
+
+
+{% endblock %}
