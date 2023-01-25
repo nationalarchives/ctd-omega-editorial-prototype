@@ -31,12 +31,14 @@ router.post('/iteration-1/login-post', function (req, res) {
   var password = req.session.data['password']
 
   // Check whether the variable matches a condition
-  if (username != '' && password != ''){
+  if (username == '1234' && password == '1234'){
     // Send user to next page
     res.redirect('/iteration-1/edit-set')
-  } else {
+  } else if (username == '' && password == '') {
     // Send user to ineligible page
     res.redirect('/iteration-1/login-invalid')
+  } else {
+    res.redirect('/iteration-1/login-error')
   }
 
 })
