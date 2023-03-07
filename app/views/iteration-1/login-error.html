@@ -17,10 +17,22 @@
   </p>
   </div>
   -->
-  <!-- <a class="govuk-back-link" href="javascript:window.history.back()">Back</a> -->
 {% endblock %}
 
 {% block content %}
+
+<div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" data-module="govuk-error-summary">
+  <h2 class="govuk-error-summary__title" id="error-summary-title">
+    There is a problem
+  </h2>
+  <div class="govuk-error-summary__body">
+    <ul class="govuk-list govuk-error-summary__list">
+      <li>
+        <a href="#username">Enter a valid username and password</a>
+      </li>
+    </ul>
+  </div>
+</div>
 
 <form class="form" action="/iteration-1/login-post" method="post">
   <div class="govuk-grid-row">
@@ -29,9 +41,12 @@
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
           <h1 class="govuk-fieldset__heading">Sign in: Pan-Archival Catalogue</h1>
         </legend>
-        <div class="govuk-form-group">
+        <div class="govuk-form-group govuk-form-group--error">
+          <p id="username-error" class="govuk-error-message">
+            <span class="govuk-visually-hidden">Error:</span> Enter a valid username and password
+          </p>
           <label class="govuk-label govuk-label--s" for="username">Username</label>
-          <input class="govuk-input" id="username" name="username" type="text" autofocus="autofocus">
+          <input class="govuk-input govuk-input--error" id="username" name="username" type="text" autofocus="autofocus">
         </div>
         <div class="govuk-form-group">
           <label class="govuk-label govuk-label--s" for="password">Password</label>
