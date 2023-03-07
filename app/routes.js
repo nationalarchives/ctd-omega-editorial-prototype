@@ -13,7 +13,7 @@ router.post('/iteration-1/edit-record-action', function (req, res) {
   if(action == 'save'){
     res.redirect('/iteration-1/confirmation-saved')
   } else if(action == 'add-creator'){
-    res.redirect('/iteration-1/edit-record-add-creator')
+    res.redirect('/iteration-1/edit-record-add-creator#creator-2')
   } else if(action == 'remove-creator'){
     res.redirect('/iteration-1/edit-record#select-creator')
   } else if(action == 'calculateDates'){
@@ -34,9 +34,11 @@ router.post('/iteration-1/login-post', function (req, res) {
   if (username == '1234' && password == '1234'){
     // Send user to next page
     res.redirect('/iteration-1/edit-set')
-  } else {
+  } else if (username == '' && password == '') {
     // Send user to ineligible page
     res.redirect('/iteration-1/login-invalid')
+  } else {
+    res.redirect('/iteration-1/login-error')
   }
 
 })
