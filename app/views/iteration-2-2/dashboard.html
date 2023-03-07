@@ -1,0 +1,147 @@
+{% extends "../layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Browse Edit Set – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<!--
+  <div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+  </div>
+  -->
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+<form class="form" action="/iteration-2-1/abandon-edit-sets" method="post">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-l">Dashboard</h1>
+    </div>
+  </div>
+  <ul class="govuk-list na-subnav__edit govuk-!-margin-bottom-9">
+    <li><a class="govuk-link" href="search">Add to Edit Set</a></li>
+    <li><a class="govuk-link" href="search">Create Populated Edit Set</a></li>
+    <li><a class="govuk-link" href="edit-set-details">Create Empty Edit Set</a></li>
+  </ul>
+
+
+
+<div class="govuk-checkboxes__item govuk-checkboxes--small">
+  <input class="govuk-checkboxes__input" id="selectAll" name="selectAll" type="checkbox" value="selectAll">
+  <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-16" for="pacid1">
+  Select all / deselect all
+  </label>
+</div>
+
+  <table class="govuk-table">
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header app-custom-class table-col-l">Edit Set Name</th>
+        <th scope="col" class="govuk-table__header app-custom-class table-col-s">Size</th>
+        <th scope="col" class="govuk-table__header app-custom-class table-col-m">Created</th>
+        <th scope="col" class="govuk-table__header app-custom-class table-col-m">Updated</th>
+        <th scope="col" class="govuk-table__header app-custom-class table-col-s">Action</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body govuk-!-font-size-16">
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">
+          <div class="govuk-checkboxes__item govuk-checkboxes--small">
+            <input class="govuk-checkboxes__input" id="pacid1" name="pacid1" type="checkbox" value="pacid1">
+            <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-16" for="pacid1">
+             COAL 80 Sample
+            </label>
+          </div>
+         </th>
+        <td class="govuk-table__cell">3</td>
+        <td class="govuk-table__cell">22 Oct 2022</td>
+        <td class="govuk-table__cell">10 Nov 2022 13:04</td>
+        <td class="govuk-table__cell"><a class="govuk-link" href="view-edit-set">View</a></td>
+       
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">
+          <div class="govuk-checkboxes__item govuk-checkboxes--small">
+            <input class="govuk-checkboxes__input" id="pacid1" name="pacid1" type="checkbox" value="pacid1">
+            <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-16" for="pacid1">
+            CAB New Year's Openings
+            </label>
+          </div>
+          </th>
+          
+        <td class="govuk-table__cell">107</td>
+        <td class="govuk-table__cell">10 Nov 2022</td>
+        <td class="govuk-table__cell">11 Nov 2022 11:52</td>
+        <td class="govuk-table__cell"><a class="govuk-link" href="view-edit-set">View</a></td>
+       
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">
+          <div class="govuk-checkboxes__item govuk-checkboxes--small">
+            <input class="govuk-checkboxes__input" id="pacid1" name="pacid1" type="checkbox" value="pacid1">
+            <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-16" for="pacid1">
+              FCO 105/1-1000
+            </label>
+          </div>
+         
+          </th>
+        <td class="govuk-table__cell">1002</td>
+        <td class="govuk-table__cell">14 Dec 2022</td>
+        <td class="govuk-table__cell">3 Jan 2023 16:36</td>
+        <td class="govuk-table__cell"><a class="govuk-link" href="view-edit-set">View</a></td>
+    
+      </tr>
+    </tbody>
+
+
+  </table>
+
+  {{ govukPagination({
+    previous: {
+      href: "#"
+    },
+    next: {
+      href: "#"
+    },
+    items: [
+      {
+        number: 1,
+        href: "#"
+      },
+      {
+        number: 2,
+        current: true,
+        href: "#"
+      },
+      {
+        number: 3,
+        href: "#"
+      }
+    ]
+  }) }}
+  
+  <button class="govuk-button" data-module="govuk-button" name="action" value="add">
+    Abandon Edit Set
+  </button>
+
+</form>
+
+
+</div>
+</div>
+
+
+{% endblock %}

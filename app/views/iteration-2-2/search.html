@@ -1,0 +1,62 @@
+{% extends "../layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Browse Edit Set – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<!--
+  <div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+  </div>
+  -->
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <a class="govuk-back-link"
+ href="javascript:history.back()">Back</a>
+
+    <ul class="govuk-list na-subnav__edit govuk-!-margin-bottom-9">
+      <li><a class="govuk-link" href="dashboard">Dashboard</a></li>
+    </ul>
+
+<div class="moj-search">
+
+  <form action="search-results" class="na-search__form" method="post">
+
+    <div class="govuk-form-group na-search__group">
+      <span class="govuk-caption-l">Add to Edit Set</span>
+      <label class="govuk-label na-search__label" for="search">
+       <h1 class="govuk-heading-l">Search the records</h1>
+      </label>
+
+     <!-- <div id="search-hint" class="govuk-hint na-search__hint">
+       Some help text here
+      </div> -->
+
+      <input class="govuk-input na-search__input" id="search" name="search" type="search" aria-describedby="search-hint">
+
+    </div>
+
+    <button class="govuk-button na-search__button" data-module="govuk-button">
+      Search
+    </button>
+
+  </form>
+</div>
+</div>
+</div>
+
+
+{% endblock %}
