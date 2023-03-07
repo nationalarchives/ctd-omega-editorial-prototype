@@ -1,0 +1,94 @@
+{% extends "../layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Browse Edit Set – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<!--
+  <div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+  </div>
+  -->
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+<form class="form" action="/iteration-2-1/dashboard" method="post">
+  <span class="govuk-caption-xl">My Edit Sets</span>
+      <h1 class="govuk-heading-l">
+        Abandon Edit Sets
+      </h1>
+   
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header app-custom-class">Edit Set Name</th>
+            <th scope="col" class="govuk-table__header app-custom-class">Size</th>
+            <th scope="col" class="govuk-table__header app-custom-class">Created</th>
+            <th scope="col" class="govuk-table__header app-custom-class">Updated</th>
+           
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">
+                 COAL 80 Sample 
+             </th>
+            <td class="govuk-table__cell">3</td>
+            <td class="govuk-table__cell">22 Oct 2022</td>
+            <td class="govuk-table__cell">10 Nov 2022 13:04</td>
+           
+           
+          </tr>
+         
+        </tbody>
+      </table>
+
+  {% from "govuk/components/radios/macro.njk" import govukRadios %}
+{{ govukRadios({
+  classes: "govuk-radios--inline",
+  name: "abandon-edit-sets",
+  fieldset: {
+    legend: {
+      text: "Are you sure you want to abandon the selected Edit Sets?",
+      classes: "govuk-fieldset__legend--s"
+    }
+  },
+
+  items: [
+    {
+      value: "yes",
+      text: "Yes"
+    },
+    {
+      value: "no",
+      text: "No"
+    }
+  ]
+}) }}
+
+
+    
+  <div class="govuk-button-group">
+    <button class="govuk-button" data-module="govuk-button" name="action" value="save">
+     Continue
+    </button>
+
+  
+  </div>
+</form>
+</div>
+</div>
+
+{% endblock %}

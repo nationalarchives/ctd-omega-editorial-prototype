@@ -20,6 +20,10 @@ $govuk-assets-path: '/govuk/assets/';
 @import "color";
 @import "header";
 
+// custom SCSS
+
+@import "patterns/side-navigation";
+
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
@@ -75,4 +79,25 @@ $govuk-assets-path: '/govuk/assets/';
  display:inline-block;
  margin-right:25px;
  text-align:right;
+}
+
+
+// table column widths
+
+.table-col-s {
+width: 15%
+}
+
+.table-col-m {
+  width: 20%
+  }
+
+  .table-col-l {
+    width: 40%
+    }
+// Details in tables
+
+
+.govuk-details-table {
+margin-top:14px;
 }

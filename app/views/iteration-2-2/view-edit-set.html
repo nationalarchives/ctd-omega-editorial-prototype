@@ -9,10 +9,12 @@
 
 {% block content %}
 
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
 <a class="govuk-back-link" href="javascript:history.back()">Back</a>
 
 
-<h1 class="govuk-heading-l">Edit Set: COAL 80 Sample</h1>
 <ul class="govuk-list na-subnav__edit govuk-!-margin-bottom-9">
   <li><a class="govuk-link" href="dashboard">Dashboard</a></li>
   <li><a class="govuk-link" href="edit-set-details">Modify Edit Set details</a></li>
@@ -20,18 +22,20 @@
   <li><a class="govuk-link" href="abandon-edit-sets">Abandon Edit Set</a></li>
 </ul>
 
-<form class="form" action="/iteration-2-1/remove-records" method="post">
+<h1 class="govuk-heading-l">Edit Set: COAL 80 Sample</h1>
+
+
+<form class="form" action="/iteration-2-2/remove-records" method="post">
   
-  <table class="govuk-table" style="width:70em;">
+  <table class="govuk-table govuk-!-font-size-16">
     <caption class="govuk-table__caption govuk-table__caption--s">National Coal Board and Predecessors: Photographs
     <p class="govuk-body">Displaying 1 - 3 records</p></caption>
     <thead class="govuk-table__head">
       <tr class="govuk-table__row">
-        <th scope="col" class="govuk-table__header app-custom-class" aria-sort="ascending">CCR</th>
-        <th scope="col" class="govuk-table__header app-custom-class" aria-sort="ascending">Description</th>
-        <th scope="col" class="govuk-table__header app-custom-class" aria-sort="ascending">Covering dates</th>
-        <th scope="col" class="govuk-table__header app-custom-class" aria-sort="ascending">Action</th>
-
+        <th scope="col" class="govuk-table__header app-custom-class table-col-s" aria-sort="ascending">CCR</th>
+        <th scope="col" class="govuk-table__header app-custom-class table-col-l" aria-sort="ascending">Description</th>
+        <th scope="col" class="govuk-table__header app-custom-class table-col-s" aria-sort="ascending">Covering dates</th>
+        <th scope="col" class="govuk-table__header app-custom-class table-col-s" aria-sort="ascending">Action</th>
       </tr>
     </thead>
     <tbody class="govuk-table__body">
@@ -39,7 +43,7 @@
         <td class="govuk-table__cell">
           <div class="govuk-checkboxes__item govuk-checkboxes--small">
           <input class="govuk-checkboxes__input" id="pacid1" name="pacid1" type="checkbox" value="pacid1">
-          <label class="govuk-label govuk-checkboxes__label" for="pacid1">
+          <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-16" for="pacid1">
            COAL 80/80/1
           </label>
         </div>
@@ -53,7 +57,7 @@
         <td class="govuk-table__cell">
           <div class="govuk-checkboxes__item govuk-checkboxes--small">
           <input class="govuk-checkboxes__input" id="pacid1" name="pacid1" type="checkbox" value="pacid1">
-          <label class="govuk-label govuk-checkboxes__label" for="pacid1">
+          <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-16" for="pacid1">
           COAL 80/80/2
           </label>
         </div>
@@ -68,8 +72,8 @@
       <tr class="govuk-table__row">
         <td class="govuk-table__cell">
           <div class="govuk-checkboxes__item govuk-checkboxes--small">
-          <input class="govuk-checkboxes__input" id="pacid1" name="pacid1" type="checkbox" value="pacid1">
-          <label class="govuk-label govuk-checkboxes__label" for="pacid1">
+          <input class="govuk-checkboxes__input" id="pacid1l" name="pacid1" type="checkbox" value="pacid1">
+          <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-16" for="pacid1">
           COAL 80/80/3
           </label>
         </div>
@@ -91,5 +95,8 @@
 }) }}
 
 </form>
+
+</div>
+</div>
 
 {% endblock %}
