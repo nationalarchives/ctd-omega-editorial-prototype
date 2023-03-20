@@ -101,3 +101,101 @@ width: 15%
 .govuk-details-table {
 margin-top:14px;
 }
+
+
+// Side navigation
+
+.sidenav {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 100px; /* Stay at the top */
+  right: 0;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+  margin-right:15px;
+}
+
+
+
+.main-with-nav {
+  margin-right: 200px;
+}
+
+
+// Sortable tables
+
+
+table.govuk-table.sortable th {
+  position: relative;
+}
+
+table.govuk-table.sortable th.no-sort {
+  padding-top: 0.35em;
+}
+
+table.govuk-table.sortable th:nth-child(5) {
+  width: 10em;
+}
+
+table.govuk-table.sortable th button {
+  position: absolute;
+  padding: 4px;
+  margin: 1px;
+  font-size: 100%;
+  font-weight: bold;
+  background: transparent;
+  border: none;
+  display: inline;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: left;
+  outline: none;
+  cursor: pointer;
+}
+
+table.govuk-table.sortable th button span {
+  position: absolute;
+  right: 25px;
+  top:15px
+}
+
+table.govuk-table.sortable th[aria-sort="descending"] span::after {
+  content: "▼";
+  font-size: 100%;
+  top: -10px;
+}
+
+table.govuk-table.sortable th[aria-sort="ascending"] span::after {
+  content: "▲";
+  font-size: 100%;
+  top: -10px;
+}
+
+table.govuk-table.show-unsorted-icon th:not([aria-sort]) button span::after {
+  content: "♢";
+  font-size: 100%;
+  position: relative;
+  top: -3px;
+  left: -4px;
+}
+
+
+/* Focus and hover styling */
+
+table.govuk-table.sortable th button:focus,
+table.govuk-table.sortable th button:hover {
+  padding: 2px;
+}
+
+
+table.govuk-table.sortable th:not([aria-sort]) button:focus span::after,
+table.govuk-table.sortable th:not([aria-sort]) button:hover span::after {
+  content: "▼";
+  font-size: 100%;
+  top: 0;
+}
