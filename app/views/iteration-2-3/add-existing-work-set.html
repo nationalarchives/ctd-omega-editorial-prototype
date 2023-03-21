@@ -1,0 +1,87 @@
+{% extends "../layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Browse Edit Set – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+
+    <form action="selectWorkSetAction"  method="post">
+    {% from "govuk/components/select/macro.njk" import govukSelect %}
+    {{ govukSelect({
+      id: "selectExistingWorkSet",
+      name: "sort",
+   
+      isPageHeading: "true",
+      label: {
+        text: "Add to existing Work Set",
+        classes: "govuk-label--l"
+      },
+   
+      items: [
+
+        {
+          value: "editset1",
+          text: "COAL 80 Sample"
+         
+        },
+        {
+          value: "editset2",
+          text: "CAB New Year's Openings"
+        },
+        {
+          value: "editset3",
+          text: "FCO 105/1-75"
+        }
+      ]
+    }) }}
+
+
+    {{ govukRadios({
+      name: "workSetAction",
+      fieldset: {
+        legend: {
+          text: "What do you want to do next?",
+          classes: "govuk-label--s"
+        }
+      },
+      items: [
+        {
+          value: "Add records and continue searching",
+          text: "Add records and continue searching"
+        },
+        {
+          value: "Add records and view the Work Set",
+          text: "Add records and view the Work Set"
+        }
+      ]
+    }) }}
+    
+      {% from "govuk/components/button/macro.njk" import govukButton %}
+    {{ govukButton({
+      text: "Continue"
+    }) }}
+
+    {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+
+  
+
+    <a class="govuk-button govuk-button--secondary" href="search-results">
+      Cancel
+    </a>
+  </div>
+</form>
+</div>
+</div>
+
+{% endblock %}

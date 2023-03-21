@@ -1,0 +1,54 @@
+{% extends "../layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Browse Edit Set – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+
+<form class="form" action="workSetAction" method="post">
+
+  {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+  
+  {{ govukRadios({
+    name: "whatToDoWorkSet",
+    fieldset: {
+      legend: {
+        text: "What do you want to do next?",
+        isPageHeading: true,
+        classes: "govuk-fieldset__legend--l"
+      }
+    },
+    items: [
+    {
+      value: "Add to existing Work Set",
+      text: "Add to existing Work Set"
+    },
+      {
+        value: "Create new Work Set",
+        text: "Create new Work Set"
+      }
+  
+    ]
+  }) }}
+
+
+    <button class="govuk-button" data-module="govuk-button" name="action" value="save">
+     Continue
+    </button>
+
+</form>
+</div>
+</div>
+
+{% endblock %}

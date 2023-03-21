@@ -1,0 +1,195 @@
+{% extends "../layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Browse Edit Set – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+
+
+
+{% block content %}
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <a class="govuk-back-link"
+ href="javascript:history.back()">Back</a>
+
+    <ul class="govuk-list na-subnav__edit govuk-!-margin-bottom-9">
+      <li><a class="govuk-link" href="search">Search again</a></li>
+    </ul>
+
+
+   
+     
+      <h1 class="govuk-heading-l" id="tblDesc"> <span class="govuk-caption-l">Add to Edit Set </span>Search results
+      </h1>
+      <p class="govuk-body">Page 2 of 2</p>
+
+    <div class="govuk-checkboxes__item govuk-checkboxes--small">
+      <input class="govuk-checkboxes__input" id="selectAll" name="selectAll" type="checkbox" value="selectAll">
+      <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-16" for="pacid1">
+      Select all / deselect all
+      </label>
+    </div>
+  <table class="govuk-table sortable" aria-describedby="tblDesc">
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header app-custom-class table-col-s">Record
+          <button><span aria-hidden="true"></span></button>
+        </th>
+        <th scope="col" class="govuk-table__header app-custom-class table-col-s">CCR
+          <button><span aria-hidden="true"></span></button>
+        </th>
+        <th scope="col" class="govuk-table__header app-custom-class table-col-l">Description
+          <button><span aria-hidden="true"></span></button>
+        </th>
+        <th scope="col" class="govuk-table__header app-custom-class table-col-s">Covering dates
+          <button><span aria-hidden="true"></span></button>
+        </th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body govuk-!-font-size-16">
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item govuk-checkboxes--small">
+          <input class="govuk-checkboxes__input" id="pacid2" name="pacid2" type="checkbox" value="pacid2">
+          <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-16" for="pacid2">
+           PAC-ID 2
+          </label>
+        </div>
+      </td>
+      
+      <td class="govuk-table__cell govuk-!-padding-top-4">COAL 80/80/11</td>
+      <td class="govuk-table__cell govuk-!-padding-top-4">Content: Folio 36. Letter from Samuel Harding, Vestry Clerk, Newcastle under Lyme, to the Poor Law Commission. He had been requested by the churchwardens who wished to know what measures they needed to take with regard to the Registration Act as they had received no communication from the assistant poor law commissioners about it. The act seemed to give them the power to start temporary registers and appoint a temporary registrar, and he was applying for that post. He added a note that he would be applying for the post of clerk to the board of guardians when it became available. Paper Number: 5211/C/1837. Poor Law Union Number 421. Counties: Staffordshire.</td> 
+
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+        In use in Coal 80 updates
+      </td>
+      <td class="govuk-table__cell govuk-!-padding-top-4">COAL 80/80/12</td>
+      <td class="govuk-table__cell govuk-!-padding-top-4">Content: Folio 37. Letter from Charles Short, medical practitioner of Betley, to the Poor Law Commission. Understanding that the position of registrar for the sub-district containing the parishes of Wolstanton, Audley, Betley, Great Madeley and [Keele] was soon to be created, he applied for that position. He was confident of the support of many eminent people in the neighbourhood. Annotated: that the usual answer be made and another annotation says that he was appointed registrar. [Paper Number: 5513/C/1837.] Poor Law Union Number 421. Counties: Staffordshire.</td> 
+      <td class="govuk-table__cell govuk-!-padding-top-4">1960</td>
+     
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item govuk-checkboxes--small">
+          <input class="govuk-checkboxes__input" id="pacid3" name="pacid3" type="checkbox" value="pacid3">
+          <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-16" for="pacid3">
+           PAC-ID 3
+          </label>
+        </div>
+      </td>
+      <td class="govuk-table__cell govuk-!-padding-top-4">COAL 80/80/13</td>
+      <td class="govuk-table__cell govuk-!-padding-top-4">Content: Folio 38. Draft letter from the Poor Law Commission to Charles Short of Betley, Newcastle under Lyme, saying that his application for the post of registrar of his sub-district had been received and recorded. Paper Number: 5513/C/1837. Poor Law Union Number 421. Counties: Staffordshire.</td> 
+      <td class="govuk-table__cell govuk-!-padding-top-4">1960</td>
+     
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item govuk-checkboxes--small">
+          <input class="govuk-checkboxes__input" id="pacid3" name="pacid3" type="checkbox" value="pacid3">
+          <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-16" for="pacid3">
+           PAC-ID 3
+          </label>
+        </div>
+      </td>
+      <td class="govuk-table__cell govuk-!-padding-top-4">COAL 80/80/14</td>
+      <td class="govuk-table__cell govuk-!-padding-top-4">Content: Folio 39. Letter from John Hill Robey, Newcastle under Lyme, to the Poor Law Commission stating that 'we' [unspecified] were anxiously waiting for the result of the deliberations of the Poor Law Commission with respect to the appointment of officers to carry out the requirements of the Registration Act in the district of Newcastle under Lyme, Burslem, Wolstanton, Audley, Betley, Keele and Madeley. Annotated: that all appointments were subsequently filled. Paper Number: 5538/C/1837. Poor Law Union Number 421. Counties: Staffordshire </td> 
+      <td class="govuk-table__cell govuk-!-padding-top-4">1960</td>
+     
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item govuk-checkboxes--small">
+          <input class="govuk-checkboxes__input" id="pacid3" name="pacid3" type="checkbox" value="pacid3">
+          <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-16" for="pacid3">
+           PAC-ID 3
+          </label>
+        </div>
+      </td>
+      <td class="govuk-table__cell govuk-!-padding-top-4">COAL 80/80/15</td>
+      <td class="govuk-table__cell govuk-!-padding-top-4">Content: Folio 40. Letter from Joseph Hunt, Newcastle under Lyme, to the Poor Law Commission. He noted that John Ward of Newcastle under Lyme had been appointed superintendent registrar and wished to know whether he had been appointed as district registrar of Newcastle under Lyme. Annotated: Samuel Harding will be appointed. Paper Number: 4253/C/1837. Poor Law Union Number 421. Counties: Staffordshire.</td> 
+      <td class="govuk-table__cell govuk-!-padding-top-4">1960</td>
+     
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item govuk-checkboxes--small">
+          <input class="govuk-checkboxes__input" id="pacid3" name="pacid3" type="checkbox" value="pacid3">
+          <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-16" for="pacid3">
+           PAC-ID 3
+          </label>
+        </div>
+      </td>
+      <td class="govuk-table__cell govuk-!-padding-top-4">COAL 80/80/16</td>
+      <td class="govuk-table__cell govuk-!-padding-top-4">Content: Folios 41-42. Letter from Weston Yonge, of Charnes Hall, Stafford, to the Poor Law Commission, recommending Mr Short [Charles Short] of Betley, Surgeon, for the office of registrar of the union about to be formed [Newcastle under Lyme]. Annotated: Mr Short's name had been inserted as Registrar for the Audley District, but the appointment had not yet been declared. Mr Short's Christian name was required. Paper Number: 5658/C/1837. Poor Law Union Number 421. Counties: Staffordshire.</td> 
+      <td class="govuk-table__cell govuk-!-padding-top-4">1960</td>
+      </tr>
+     
+    </tbody>
+  </table>
+
+  {% from "govuk/components/pagination/macro.njk" import govukPagination %}
+
+{{ govukPagination({
+  previous: {
+    href: "search-results"
+  },
+  items: [
+    {
+      number: 1,
+     
+      href: "search-results"
+    },
+    {
+      number: 2,
+      current: true,
+      href: "#"
+    }
+  
+  ]
+}) }}
+
+  <form class="form" action="edit-set-details" method="post">
+  {% from "govuk/components/select/macro.njk" import govukSelect %}
+{{ govukSelect({
+  id: "sort",
+  name: "sort",
+  label: {
+    text: "Add to Edit Set"
+  },
+  items: [
+    {
+      value: "newset",
+      text: "Create new Edit Set",
+      selected: true
+    },
+    {
+      value: "editset1",
+      text: "COAL 80 Sample"
+     
+    },
+    {
+      value: "editset2",
+      text: "CAB New Year's Openings"
+    },
+    {
+      value: "editset3",
+      text: "FCO 105/1-75"
+    }
+  ]
+}) }}
+
+  {% from "govuk/components/button/macro.njk" import govukButton %}
+{{ govukButton({
+  text: "Add to Edit Set"
+}) }}
+
+{% endblock %}
+</form>
+</div>
+</div>
