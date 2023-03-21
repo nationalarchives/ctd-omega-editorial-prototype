@@ -10,21 +10,33 @@
 {% block content %}
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
+
+    
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-
     <a class="govuk-back-link"
- href="javascript:history.back()">Back</a>
-
-    <ul class="govuk-list na-subnav__edit govuk-!-margin-bottom-9">
-      <li><a class="govuk-link" href="search">Search again</a></li>
-    </ul>
-
+    href="javascript:history.back()">Back</a>
+    <div class="moj-search govuk-!-margin-top-8">
+      <form action="search-results" class="na-search__form" method="post">
+        <div class="govuk-form-group na-search__group">
+          <label class="govuk-label na-search__label" for="search">
+        Search the records
+          </label>
+          <input class="govuk-input na-search__input" id="search" name="search" type="search" aria-describedby="search-hint">
+        </div>
+        <button class="govuk-button na-search__button" data-module="govuk-button">
+          Search
+        </button>
+      </form>
+      </div>
+      </div>
+      </div>
 
    
-     
-      <h1 class="govuk-heading-l" id="tblDesc"> <span class="govuk-caption-l">Add to Edit Set </span>Search results
-      </h1>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+
+      <h1 class="govuk-heading-l" id="tblDesc">Search results</h1>
       <p class="govuk-body">Page 2 of 2</p>
 
     <div class="govuk-checkboxes__item govuk-checkboxes--small">
@@ -33,6 +45,7 @@
       Select all / deselect all
       </label>
     </div>
+    <form action="searchResultsAction"  method="post">
   <table class="govuk-table sortable" aria-describedby="tblDesc">
     <thead class="govuk-table__head">
       <tr class="govuk-table__row">
@@ -154,42 +167,32 @@
   ]
 }) }}
 
-  <form class="form" action="edit-set-details" method="post">
-  {% from "govuk/components/select/macro.njk" import govukSelect %}
-{{ govukSelect({
-  id: "sort",
-  name: "sort",
-  label: {
-    text: "Add to Edit Set"
+  
+{{ govukRadios({
+  name: "searchResultsAction",
+  fieldset: {
+    legend: {
+      text: "What do you want to do next?",
+    
+      classes: "govuk-fieldset__legend--s"
+    }
   },
   items: [
-    {
-      value: "newset",
-      text: "Create new Edit Set",
-      selected: true
-    },
-    {
-      value: "editset1",
-      text: "COAL 80 Sample"
-     
-    },
-    {
-      value: "editset2",
-      text: "CAB New Year's Openings"
-    },
-    {
-      value: "editset3",
-      text: "FCO 105/1-75"
-    }
+  {
+    value: "Add selected records to an existing Work Set",
+    text: "Add selected records to an existing Work Set"
+  },
+  {
+    value: "Add selected records to a new Work Set",
+    text: "Add selected records to a new Work Set"
+  }
+
+ 
+
   ]
 }) }}
 
-  {% from "govuk/components/button/macro.njk" import govukButton %}
-{{ govukButton({
-  text: "Add to Edit Set"
-}) }}
-
-{% endblock %}
 </form>
 </div>
 </div>
+{% endblock %}
