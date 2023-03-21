@@ -1,0 +1,275 @@
+{% extends "../layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Edit record
+{% endblock %}
+
+{% block beforeContent %}
+<!--
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+    </p>
+</div>
+-->
+  <a class="govuk-back-link"
+  href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-three-quarters main-with-nav">
+
+<h1 class="govuk-heading-l">COAL 80/80/1</h1>
+<h2 class="govuk-heading-m">PAC-ID: COAL.2022.V5RJW.P Physical Record</h2>
+<p class="govuk-body">Series: National Coal Board and predecessors: Photographs</p>
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+
+
+<form class="form" action="edit-record-action" method="post">
+
+  
+
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h3 class="govuk-fieldset__heading" id="keyInfo" name="keyInfo">Key information</h3>
+    </legend>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="event-name">
+        Title
+      </label>
+      <input class="govuk-input" id="title" name="title" type="text">
+    </div>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="more-detail">Description</label>
+      <textarea class="govuk-textarea" id="scope-content" name="scope-content" rows="5">Bedlington Colliery, Newcastle Upon Tyne. Photograph depicting: view of pithead baths.</textarea>
+    </div>
+
+
+
+    <div id="covering-dates" class="govuk-form-group">
+      <label class="govuk-label" for="covering-dates">Covering dates</label>
+      <input class="govuk-input govuk-!-width-one-half" id="covering-dates" name="covering-dates" type="text" autocomplete="address-level2" value="1960"/>
+      <a class="govuk-button" data-module="govuk-button" href="#">
+        Calculate start and end dates
+      </a>
+    </div>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half">
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" role="group" aria-describedby="start-date-hint">
+        <legend class="govuk-fieldset__legend">
+          Start date
+        </legend>
+        <div class="govuk-date-input" id="start-date">
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="start-date-day">
+                Day
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-date-day" name="start-date-day" type="text" inputmode="numeric">
+            </div>
+          </div>
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="start-date-month">
+                Month
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-date-month" name="start-date-month" type="text" inputmode="numeric">
+            </div>
+          </div>
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="start-date-year">
+                Year
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="start-date-year" name="start-date-year" type="text" inputmode="numeric">
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    </div>
+    <div class="govuk-grid-column-one-half">
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" role="group" aria-describedby="end-date-hint">
+        <legend class="govuk-fieldset__legend">
+          End date
+        </legend>
+        <div class="govuk-date-input" id="end-date">
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="end-date-day">
+                Day
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="end-date-day" name="end-date-day" type="text" inputmode="numeric">
+            </div>
+          </div>
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="end-date-month">
+                Month
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="end-date-month" name="end-date-month" type="text" inputmode="numeric">
+            </div>
+          </div>
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="end-date-year">
+                Year
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="end-date-year" name="end-date-year" type="text" inputmode="numeric">
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    </div>
+    </div>
+
+    <h3 class="govuk-heading-m" id="access" name="access">Access and use</h3>
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="held-by">
+        Held by
+      </label>
+      <select class="govuk-select" id="held-by" name="held-by">
+        <option value="the national archives" selected="selected">The National Archives</option>
+      </select>
+    </div>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="sort">
+        Legal status
+      </label>
+      <select class="govuk-select" id="sort" name="sort">
+        <option value="public records">Public Records</option>
+        <option value="not public records">Not Public Records</option>
+        <option value="public records unless otherwise stated">Public Records unless otherwise stated</option>
+        <option value="welsh public records">Welsh Public Records</option>
+      </select>
+    </div>
+
+    <h3 class="govuk-heading-m" id="context" name="context">Context</h3>
+
+    <div id="select-creator" class="govuk-form-group">
+      <label class="govuk-label" for="sort">
+        Select creator
+      </label>
+      <select class="govuk-select" id="sort" name="sort">
+        <option value="published">National Coal Board</option>
+        <option value="updated">Transport for London</option>
+        <option value="post office">Post Office</option>
+      </select>
+      <button class="govuk-button govuk-button--secondary" data-module="govuk-button" name="action" value="remove-creator">Remove</button>
+      <button class="govuk-button" data-module="govuk-button" name="action" value="add-creator">
+        Add another
+      </button>
+    </div>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="former-reference-dept">Former reference in its original department (optional)</label>
+      <input class="govuk-input govuk-input--width-20" id="former-reference-dept" name="former-reference-dept" type="text">
+    </div>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="former-reference-pro">Former archival reference (optional)</label>
+      <input class="govuk-input govuk-input--width-20" id="former-reference-pro" name="former-reference-pro" type="text">
+    </div>
+
+  
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="custodial-history">Custodial History (optional)</label>
+      <textarea class="govuk-textarea" id="custodial-history" name="scope-content" rows="5"></textarea>
+    </div>
+
+  
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="custodial-history">Note (optional)</label>
+      <textarea class="govuk-textarea" id="custodial-history" name="scope-content" rows="5"></textarea>
+    </div>
+
+   
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="admin-biog-background">Administrative / biographical background (optional)</label>
+      <textarea class="govuk-textarea" id="admin-biog-background" name="admin-biog-background" rows="5"></textarea>
+    </div>
+
+
+  </fieldset>
+
+
+  <h3 class="govuk-heading-m" id="allied" name="allied">Allied material</h3>
+
+
+  <h3 class="govuk-heading-s" id="related" name="related">Related material (optional)</h3>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>Bedlington Colliery, Newcastle Upon Tyne. Photograph depicting: view of pithead baths.</li>
+    <li><a href="#">COAL 80/80/3</a></li>
+    <li><a href="#">COAL 80/80/2</a> - Bedlington Colliery, Newcastle Upon Tyne. Photograph depicting: view of pithead baths.</li>
+  </ul>
+
+  <h4 class="govuk-heading-s" id="separated" name="separated">Separated material (optional)</h4>
+  <ul class="govuk-list govuk-list--bullet">
+    <li><a href="#">COAL 80/80/5</a></li>
+    <li><a href="#">COAL 80/80/6</a></li>
+    <li><a href="#">COAL 80/80/7</a></li>
+  </ul>
+  
+</form>
+</div>
+
+
+
+  <div class="govuk-grid-column-one-quarter sidenav">
+        <nav class="moj-side-navigation" aria-label="Page navigation">
+          <h2 class="govuk-heading-s govuk-!-font-size-14">Navigation</h2>
+          <ul class="moj-side-navigation__list govuk-!-font-size-14">
+            <li class="moj-side-navigation__item">
+              <a href="#keyInfo">Key Information</a>
+            </li>
+    
+            <li class="moj-side-navigation__item">
+              <a href="#access">Access and use</a>
+            </li>
+            <li class="moj-side-navigation__item">
+              <a href="#context">Context</a></li>
+                <li class="moj-side-navigation__item">
+                  <a href="#allied">Allied material</a></li>
+          </ul>
+         
+
+               
+                
+        </nav>
+
+        <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-4">
+
+        <div class="govuk-button-group">
+          <button class="govuk-button" data-module="govuk-button" name="action" value="save">
+            Save changes
+          </button>
+      
+          <button class="govuk-button govuk-button--secondary" data-module="govuk-button" name="action" value="discard">
+            Discard changes
+          </button>
+        </div>
+
+  </div>
+
+</div>
+</div>
+
+{% endblock %}

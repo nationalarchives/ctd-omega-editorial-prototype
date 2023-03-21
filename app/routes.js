@@ -244,3 +244,71 @@ router.post('/iteration-2-2/edit-record-action', function (req, res) {
 })
 
 module.exports = router
+
+
+
+// iteration 2-3
+
+router.post('/iteration-2-3/dashboard-action', function (req, res) {
+
+  var action = req.body.action;
+
+  if(action == 'add'){
+    res.redirect('/iteration-2-3/search')
+  } else {
+    res.redirect('iteration-2-3/dashboard')
+  }
+
+})
+
+router.post('/iteration-2-3/edit-set-action', function (req, res) {
+
+
+  //var action = req.body.action;
+  res.redirect('/iteration-2-3/edit-set')
+
+})
+
+router.post('/iteration-2-3/edit-record-action', function (req, res) {
+
+ 
+  var action = req.body.action;
+
+  if(action == 'save'){
+    res.redirect('/iteration-2-3/confirmation-saved')
+  } else if(action == 'add-creator'){
+    res.redirect('/iteration-2-2/edit-record-add-creator')
+  } else if(action == 'remove-creator'){
+    res.redirect('/iteration-2-2/edit-record#select-creator')
+  } else if(action == 'calculateDates'){
+    res.redirect('/iteration-2-2/edit-record#covering-dates')
+  } else {
+    res.redirect('/iteration-2-2/confirmation-discarded')
+  }
+
+})
+
+
+router.post('/iteration-2-3/searchResultsAction', function (req, res) {
+
+  var whatToDoSearchResults = req.session.data['searchResultsAction']
+  if (whatToDoSearchResults == 'Add selected records to a new Work Set'){
+    res.redirect('create-work-set')
+  } else {
+    res.redirect('add-existing-work-set')
+  }
+
+})
+
+router.post('/iteration-2-3/selectWorkSetAction', function (req, res) {
+
+  var workSetAction = req.session.data['workSetAction']
+  if (workSetAction == 'Add records and continue searching' || workSetAction == 'Create Work Set and search more records'){
+    res.redirect('search-results')
+  } else {
+    res.redirect('view-work-set')
+  }
+
+})
+
+module.exports = router
