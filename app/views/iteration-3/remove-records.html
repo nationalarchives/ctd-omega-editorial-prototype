@@ -1,0 +1,96 @@
+{% extends "../layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Browse Edit Set – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<!--
+  <div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+  </div>
+  -->
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+<form class="form" action="view-work-set-removed-message" method="post">
+  <span class="govuk-caption-xl">COAL 80 Sample</span>
+      <h1 class="govuk-heading-l">
+        Remove records from Edit Set
+      </h1>
+   
+
+   <table class="govuk-table" data-module="moj-sortable-table">
+    <caption class="govuk-table__caption govuk-table__caption--s">National Coal Board and Predecessors: Photographs
+  
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header app-custom-class" aria-sort="ascending">CCR</th>
+        <th scope="col" class="govuk-table__header app-custom-class" aria-sort="ascending">Description</th>
+        <th scope="col" class="govuk-table__header app-custom-class" aria-sort="ascending">Covering dates</th>
+       
+
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+         
+           COAL 80/80/1
+        
+      </td>
+        <td class="govuk-table__cell govuk-!-padding-top-4">Bedlington colliery, Newcastle Upon Tyne, Photograph depicting: view of pithead baths.</td>
+        <td class="govuk-table__cell govuk-!-padding-top-4">1960</td>
+       
+      </tr>
+    </tbody>
+  </table>
+
+  {% from "govuk/components/radios/macro.njk" import govukRadios %}
+{{ govukRadios({
+  classes: "govuk-radios--inline",
+  name: "changed-name",
+  fieldset: {
+    legend: {
+      text: "Are you sure you want to remove the selected records?",
+      classes: "govuk-fieldset__legend--s"
+    }
+  },
+
+  items: [
+    {
+      value: "yes",
+      text: "Yes"
+    },
+    {
+      value: "no",
+      text: "No"
+    }
+  ]
+}) }}
+
+
+    
+  <div class="govuk-button-group">
+    <button class="govuk-button" data-module="govuk-button" name="action" value="save">
+      Continue
+    </button>
+
+  
+  </div>
+</form>
+</div>
+</div>
+
+{% endblock %}

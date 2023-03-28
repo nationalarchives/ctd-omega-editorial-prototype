@@ -1,0 +1,172 @@
+{% extends "../layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Browse Edit Set – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+
+
+
+{% block content %}
+
+
+<div class="na-notification-bar govuk-!-margin-bottom-9">
+  <div class="na-notification-text">
+      <p class="na-notification-text">Coal 80/80/84 added to Work Set</p>
+  </div>
+  <a class="btn btn-close dismissbar" href="view-work-set">Close</a>
+</div>
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <div class="moj-search govuk-!-margin-bottom-9">
+      <form action="search-results-add-work-set" class="na-search__form" method="post">
+        <div class="govuk-form-group na-search__group">
+          <label class="govuk-label na-search__label" for="search">
+        Search records and add to Work Set
+          </label>
+          <input class="govuk-input na-search__input" id="search" name="search" type="search" aria-describedby="search-hint">
+        </div>
+        <button class="govuk-button na-search__button" data-module="govuk-button">
+          Search
+        </button>
+      </form>
+      </div>
+      </div>
+      </div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+
+
+
+
+
+<h1 class="govuk-heading-l govuk-!-margin-bottom-3">Work Set: COAL 80 Sample</h1>
+<p><a class="govuk-link" href="modify-work-set">Modify details</a> <span class="govuk-!-padding-left-3 govuk-!-padding-right-3">|</span> <a class="govuk-link" href="abandon-work-set">Abandon Work Set</a></p>
+
+
+<h2 class="govuk-heading-m govuk-!-margin-top-9" id="tblDesc">Series: COAL 80 - National Coal Board and Predecessors: Photographs</h2>
+<h3 class="govuk-heading-s">Piece: COAL 80/80 - Bedlington 'D' Colliery, Newcastle Upon Tyne. Described at item level.</h3>
+<p class="govuk-body">Displaying 1 - 3 records</p>
+  
+<div class="govuk-checkboxes__item govuk-checkboxes--small">
+  <input class="govuk-checkboxes__input"  id="selectAll" name="selectAll" type="checkbox" value="selectAll">
+  <label class="govuk-label govuk-checkboxes__label" for="pacid1">
+  Select all / deselect all
+  </label>
+</div>
+
+
+  <table class="govuk-table sortable govuk-!-font-size-16">
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header app-custom-class table-col-s" aria-sort="ascending">CCR
+          <button> 
+            <span aria-hidden="true"></span>
+          </button></th>
+        </th>
+        <th scope="col" class="govuk-table__header app-custom-class table-col-l" aria-sort="ascending">Description
+          <button> 
+            <span aria-hidden="true"></span>
+          </button></th>
+        </th>
+        <th scope="col" class="govuk-table__header app-custom-class table-col-s" aria-sort="ascending">Covering dates
+          <button> 
+            <span aria-hidden="true"></span>
+          </button></th>
+        </th>
+        <th scope="col" class="govuk-table__header app-custom-class table-col-s" aria-sort="ascending">Action
+          <button> 
+            <span aria-hidden="true"></span>
+          </button></th>
+        </th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item govuk-checkboxes--small">
+          <input class="govuk-checkboxes__input" id="pacid1" name="pacid1" type="checkbox" value="pacid1">
+          <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-16" for="pacid1">
+          COAL 80/80/2
+          </label>
+        </div>
+      </td>
+      <td class="govuk-table__cell govuk-!-padding-top-4">Content:  Folios 77-80. Memorial from the mayor, justices and ratepayers of the borough and parish of Newcastle under Lyme to the Poor Law Commission, expressing their wishes as to the proposed union.
+
+        {{ govukDetails({
+        summaryText: "More...",
+        classes:"govuk-details-table govuk-!-font-size-16",
+        text: "They were pleased when the registration district was formed to find themselves in the same district as the parishes of Audley, Betley, Keel [Keele], Great Madeley, Burslem and Wolstanton and this led them to expect that this would eventually form a union under the Poor Law Act. This would be highly satisfactory as Newcastle under Lyme was the only post town in the district and had a grant for a Court of Quarter Sessions for the Borough, which would be convenient for transacting the business of a union. While the parish of Stoke upon Trent was trying to effect a union with Newcastle under Lyme, and representing Newcastle under Lyme as being in support of their proposal, this was assuredly not the case. The basis of the petition was that should such a union be formed, Newcastle under Lyme would have no chance of fair representation in the board of guardians because of the much greater population of Stoke upon Trent: they calculated that it would be a ratio of four to one against Newcastle under Lyme. They requested to be part of a union with Audley, Betley, Keel [Keele], Great Madeley, Burslem and Wolstanton, or similarly-sized parishes. It was signed by: Thomas Ward, Mayor; Robert Hall, Justice; John Mason, Justice; Thomas Phillips; John Nickisson; Elias Shaw. Charles Booth; Samuel Mayer, Justice; J Scott, Justice; Samuel Mayor; [Thomas Turner], J F Hyatt [John Ford Hyatt], Clement Leigh, Rector; Robert Bull; J W Ward [John William Ward]; John Wright, Incumbent and Minister of St George, Newcastle under Lyme; John Porter, Curate of the Parish Church; Edward Wilson, M D; Ambrose Astle, Surgeon; J E Phillips, Thursfield [Isaac Thursfield], Moody [Joseph Moody], [T Bentley], [Samuel B C], George Wood, John Beech, Thomas Eardley, William Rutland, [William Moss], George Tait, R L Dudley, Thomas Kinnersly, James Cooper, John Snape, Thomas Brittain, John Hargreaves, John Caddick, John D Moss, Joseph Broomhall, R Chapman, David Roberts, [Illegible], Thomas Venables, H Smith, Joseph Mellard, D Arnold [David Arnold], John Williams, [J Brothers], E Brothers, Thomas Massey, Thomas Mason, W H Hyde, John Skerratt, [Thomas Plant], [Carryer], Robert Broughton, Brian Broughton, Thomas Gray, Thomas Wright, Josiah Robey, [Joseph Callton], A Bristol, Jesse Prime, Richard Wayte, [James Hines], William Woodward, [Charles Pepper & Son], Brittain Adams, James Brabin, [James Brindley], Samuel Harding, [Richard Bull], Thomas Holland, Joseph Beardmore, John Downs, Hugh Cochrane, [T Fenton], Thomas Leech, [Eardley], John Hallam, [Richard Broadpoint], Thomas Baggauley, George Titley, William Barker, James Sellers, John Leech, Joseph Lawton, Joseph Pattison, John Cooper, Jobe Mee, John Malkin, James Turner, John Whittingham, John Mason, Edward Mason, Thomas Smith, J Goodall, Thomas Gribbin, Thomas Woolliscroft, Richard Lawton, Thomas Tittensor, Robert Brown, John Cheshire, Ralph Shufflebotham, William Jones, [John Cheshire], John Cheshire, Ralph Jackson, John Foden, John Bourne, John Cook, William Heath, Thomas Gallimore senior, Thomas Gallimore junior, Tomas Cook, William Witaker, D Pickerel, Edward Brassington, [J Conyers], J Foden, Thomas Bayley, [John Leare], John Jackson, Thomas Bayley, Edward Foden, Samuel Hassall, John Broomhall, John Jackson, John Harriman, Ralph Cooper, John Haddley, Burslem Welch, Thomas Cheshire, David Drake, [Thomas Walch], Joseph Gee, George Edge, John Powis, John Parr, William Mason, [William Leedham], Thomas Pye, William Heath, Thomas Pye junior, George Rodes, William Burgess, John Pattison, William Hadley, John Beardmore, James Eardley, Samuel Rhodes, [Patrick Darmody], John Adams, James Ridgley, Samuel Rhodes, William Owens, [John Mushtey], William Robinson, [Saul Rodes], [James Eaten], Thomas Bagguley, William Reynolds, Henry Bagguley, [William Cook], John Whittaker, James Whittaker, Thomas Mayer, John Pendleton, Daniel Rhodes, [William Cockesake], Thomas Beardmore, Richard Malkin, James Barlow, John Griffith, Richard Hughes, Stephen Hughes, Samuel Tittensor, John Haspley, Thomas Tittensor, John Mason, Edward Leech, [Thomas Conyuers], James Matthews, Joseph Griffith, [William Dicken], Joseph Tilston, William Chadwick, Ralph Harrison, William Barnett, John Barnett, John Tagg, [Illegible], [John Griffith], John Booth, John Jones, John Bloor, John Shaw, Henry Eaton, John Turner, William Sullivan, George Fox, [Continued to MH Paper Number: 12/11363/.] Poor Law Union Number 421. Counties: Staffordshire."
+        }) }} </td> 
+      <td class="govuk-table__cell govuk-!-padding-top-4">1961
+        </td>
+        <td class="govuk-table__cell govuk-!-padding-top-4"><a class="govuk-link" href="edit-record">Edit <span class="govuk-visually-hidden"> CCR2</span></a></td>
+       
+
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item govuk-checkboxes--small">
+          <input class="govuk-checkboxes__input" id="pacid1l" name="pacid1" type="checkbox" value="pacid1">
+          <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-16" for="pacid1">
+          COAL 80/80/3
+          </label>
+        </div>
+      </td>
+      <td class="govuk-table__cell govuk-!-padding-top-4">Content: Folios 1-3. Letter from Thomas Phillips, Mayor of Newcastle-under-Lyme, to the Poor Law Commission stating that the conduct of the poor house and out relief had been notoriously bad for some years on account of the problems caused by the voluntary nature of the overseers' job such that disorder and irregularity pervades their work. 
+       
+
+        {{ govukDetails({
+        summaryText: "More...",
+        classes:"govuk-details-table govuk-!-font-size-16",
+        text: "The inhabitants desired to remedy this situation by appointing paid officers, but given the expense of this, Mr Phillips had been asked to enquire whether any new arrangements they made would interfere with plans for dealing with the poor under the Poor Law Amendment Act. He wished to know how soon new arrangements might come into force and requested advice on what course should be adopted in the meantime. Annotated: that by mistake the letter had never been answered. [Folio 1 is the year guard.] Poor Law Union Number 421. Counties: Staffordshire.
+        "
+        }) }} </td> 
+         <td class="govuk-table__cell govuk-!-padding-top-4">1962</td>
+        <td class="govuk-table__cell govuk-!-padding-top-4"><a class="govuk-link" href="edit-record">Edit <span class="govuk-visually-hidden"> CCR3</span></a></td>
+       
+     
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item govuk-checkboxes--small">
+          <input class="govuk-checkboxes__input" id="pacid1l" name="pacid1" type="checkbox" value="pacid1">
+          <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-16" for="pacid1">
+          COAL 80/80/4
+          </label>
+        </div>
+      </td>
+      <td class="govuk-table__cell govuk-!-padding-top-4">Content: Folios 1-3. Letter from Thomas Phillips, Mayor of Newcastle-under-Lyme, to the Poor Law Commission stating that the conduct of the poor house and out relief had been notoriously bad for some years on account of the problems caused by the voluntary nature of the overseers' job such that disorder and irregularity pervades their work. 
+       
+
+        {{ govukDetails({
+        summaryText: "More...",
+        classes:"govuk-details-table govuk-!-font-size-16",
+        text: "The inhabitants desired to remedy this situation by appointing paid officers, but given the expense of this, Mr Phillips had been asked to enquire whether any new arrangements they made would interfere with plans for dealing with the poor under the Poor Law Amendment Act. He wished to know how soon new arrangements might come into force and requested advice on what course should be adopted in the meantime. Annotated: that by mistake the letter had never been answered. [Folio 1 is the year guard.] Poor Law Union Number 421. Counties: Staffordshire.
+        "
+        }) }} </td> 
+         <td class="govuk-table__cell govuk-!-padding-top-4">1962</td>
+        <td class="govuk-table__cell govuk-!-padding-top-4"><a class="govuk-link" href="edit-record">Edit <span class="govuk-visually-hidden"> CCR3</span></a></td>
+       
+     
+      </tr>
+    </tbody>
+  </table>
+
+  <form class="form" action="remove-records" method="post">
+
+  {% from "govuk/components/button/macro.njk" import govukButton %}
+{{ govukButton({
+  text: "Remove selected Records"
+}) }}
+
+</form>
+
+</div>
+</div>
+
+{% endblock %}
