@@ -21,7 +21,7 @@
       <form action="search-results" class="na-search__form" method="post">
         <div class="govuk-form-group na-search__group">
           <label class="govuk-label na-search__label" for="search">
-        Search the records
+        Search the records again
           </label>
           <input class="govuk-input na-search__input" id="search" name="search" type="search" aria-describedby="search-hint">
         </div>
@@ -41,18 +41,22 @@
       <h1 class="govuk-heading-l govuk-!-margin-top-8" id="tblDesc"><span class="govuk-caption-l">Add to Work Set: [workset name]</span>Search results</h1>
       <p class="govuk-body">Page 1 of 2</p>
 
-    <div class="govuk-checkboxes__item govuk-checkboxes--small">
-      <input class="govuk-checkboxes__input" id="selectAll" name="selectAll" type="checkbox" value="selectAll">
-      <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-16" for="pacid1">
-      Select all / deselect all
-      </label>
-    </div>
-
-    <form action="searchResultsAction"  method="post">
+      <div class="govuk-checkboxes__item govuk-checkboxes--small">
+        <input class="govuk-checkboxes__input"  id="selectAll" name="selectAll" type="checkbox" value="selectAll">
+        <label class="govuk-label govuk-checkboxes__label" for="pacid1">
+        Select all / deselect all
+        </label>
+      </div>
+  
   <table class="govuk-table sortable" aria-describedby="tblDesc">
     <thead class="govuk-table__head">
       <tr class="govuk-table__row">
-        <th scope="col" class="govuk-table__header app-custom-class table-col-s" aria-sort="ascending">Record
+        <th scope="col" class="govuk-table__header app-custom-class table-col-s" aria-sort="ascending">
+        
+          
+          Record
+        
+        
           <button><span aria-hidden="true"></span></button>
         </th>
         <th scope="col" class="govuk-table__header app-custom-class table-col-s" aria-sort="ascending">CCR
@@ -241,40 +245,16 @@ text: "Their names were as follows: 1. Ralph Sneyd. 2. Henry Turton, Minister of
     },
     {
       number: 2,
-      href: "search-results-2"
+      href: "search-results-create-work-set-2"
     }
   ]
 }) }}
 
 
-  
-{{ govukRadios({
-  name: "searchResultsAction",
-  fieldset: {
-    legend: {
-      text: "What do you want to do next?",
-    
-      classes: "govuk-fieldset__legend--s"
-    }
-  },
-  items: [
-  {
-    value: "Add selected records to an existing Work Set",
-    text: "Add selected records to an existing Work Set"
-  },
-  {
-    value: "Add selected records to a new Work Set",
-    text: "Add selected records to a new Work Set"
-  }
-
- 
-
-  ]
-}) }}
-
+<form action="create-work-set"  method="post">
   {% from "govuk/components/button/macro.njk" import govukButton %}
 {{ govukButton({
-  text: "Continue"
+  text: "Create new Work Set"
 }) }}
 
 

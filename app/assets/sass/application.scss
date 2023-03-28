@@ -15,6 +15,7 @@ $govuk-assets-path: '/govuk/assets/';
 @import "patterns/related-items";
 @import "patterns/task-list";
 
+
 // TNA Frontend Design Toolkit styles
 @import "variables";
 @import "color";
@@ -198,4 +199,28 @@ table.govuk-table.sortable th:not([aria-sort]) button:hover span::after {
   content: "▼";
   font-size: 100%;
   top: 0;
+}
+
+
+.na-notification-bar {
+	background-color:#00703c;
+  padding:5px;
+  border:1px solid black;
+  position:relative;
+}
+
+.na-notification-text {
+	color:#FFFFFF;
+  text-align:center;
+  margin-top:10px;
+  font-weight: bold;
+}
+
+.btn.btn-close {
+	color:#FFFFFF;
+	font-weight:bold;
+  position:absolute;
+  top: 15px;
+  right:15px;
+
 }

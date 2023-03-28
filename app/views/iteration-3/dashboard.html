@@ -1,0 +1,91 @@
+{% extends "../layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Browse Edit Set – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<!--
+  <div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+  </div>
+  -->
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <div class="moj-search">
+      <form action="search-results-create-work-set" class="na-search__form" method="post">
+        <div class="govuk-form-group na-search__group">
+          <label class="govuk-label na-search__label" for="search">
+        Search the records and add to new Work Set
+          </label>
+          <input class="govuk-input na-search__input" id="search" name="search" type="search" aria-describedby="search-hint">
+        </div>
+        <button class="govuk-button na-search__button" data-module="govuk-button">
+          Search
+        </button>
+      </form>
+      </div>
+      </div>
+      </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-l govuk-!-margin-top-8">Dashboard</h1>
+  <table class="govuk-table sortable">
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header app-custom-class table-col-l">Work Set Name
+          <button><span aria-hidden="true"></span></button>
+        </th>
+        <th scope="col" class="govuk-table__header app-custom-class table-col-m">Size of Work Set
+          <button><span aria-hidden="true"></span></button>
+        </th>
+        <th scope="col" class="govuk-table__header app-custom-class table-col-m">Work Set Created
+          <button><span aria-hidden="true"></span></button>
+        </th>
+        <th scope="col" class="govuk-table__header app-custom-class table-col-m">Work Set Updated
+          <button><span aria-hidden="true"></span></button>
+        </th>
+      
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body govuk-!-font-size-16">
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">   <a class="govuk-link" href="view-work-set">COAL 80 Sample</a></td>
+        <td class="govuk-table__cell">3</td>
+        <td class="govuk-table__cell">22 Oct 2022</td>
+        <td class="govuk-table__cell">10 Nov 2022 13:04</td>
+
+       
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"> <a class="govuk-link" href="view-work-set">CAB New Year's Openings</a></td>
+        <td class="govuk-table__cell">107</td>
+        <td class="govuk-table__cell">10 Nov 2022</td>
+        <td class="govuk-table__cell">11 Nov 2022 11:52</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"> <a class="govuk-link" href="view-work-set">FCO 105/1-1000</a></td>
+
+        <td class="govuk-table__cell">1002</td>
+        <td class="govuk-table__cell">14 Dec 2022</td>
+        <td class="govuk-table__cell">3 Jan 2023 16:36</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+</div>
+
+
+{% endblock %}
