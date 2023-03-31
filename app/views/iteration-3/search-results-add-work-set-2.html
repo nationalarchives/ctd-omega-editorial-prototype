@@ -37,7 +37,7 @@
         <div class="govuk-grid-column-full">
 
       <h1 class="govuk-heading-l" id="tblDesc">Search results</h1>
-      <p class="govuk-body">Page 2 of 2</p>
+      <p class="govuk-body">Displaying 50 - 100 of 1000 results</p>
 
     <div class="govuk-checkboxes__item govuk-checkboxes--small">
       <input class="govuk-checkboxes__input" id="selectAll" name="selectAll" type="checkbox" value="selectAll">
@@ -45,7 +45,6 @@
       Select all / deselect all
       </label>
     </div>
-    <form action="searchResultsAction"  method="post">
   <table class="govuk-table sortable" aria-describedby="tblDesc">
     <thead class="govuk-table__head">
       <tr class="govuk-table__row">
@@ -76,7 +75,7 @@
       
       <td class="govuk-table__cell govuk-!-padding-top-4">COAL 80/80/11</td>
       <td class="govuk-table__cell govuk-!-padding-top-4">Content: Folio 36. Letter from Samuel Harding, Vestry Clerk, Newcastle under Lyme, to the Poor Law Commission. He had been requested by the churchwardens who wished to know what measures they needed to take with regard to the Registration Act as they had received no communication from the assistant poor law commissioners about it. The act seemed to give them the power to start temporary registers and appoint a temporary registrar, and he was applying for that post. He added a note that he would be applying for the post of clerk to the board of guardians when it became available. Paper Number: 5211/C/1837. Poor Law Union Number 421. Counties: Staffordshire.</td> 
-
+      <td class="govuk-table__cell govuk-!-padding-top-4">1960</td>
       </tr>
       <tr class="govuk-table__row">
         <td class="govuk-table__cell">
@@ -84,7 +83,7 @@
       </td>
       <td class="govuk-table__cell govuk-!-padding-top-4">COAL 80/80/12</td>
       <td class="govuk-table__cell govuk-!-padding-top-4">Content: Folio 37. Letter from Charles Short, medical practitioner of Betley, to the Poor Law Commission. Understanding that the position of registrar for the sub-district containing the parishes of Wolstanton, Audley, Betley, Great Madeley and [Keele] was soon to be created, he applied for that position. He was confident of the support of many eminent people in the neighbourhood. Annotated: that the usual answer be made and another annotation says that he was appointed registrar. [Paper Number: 5513/C/1837.] Poor Law Union Number 421. Counties: Staffordshire.</td> 
-      <td class="govuk-table__cell govuk-!-padding-top-4">1960</td>
+      <td class="govuk-table__cell govuk-!-padding-top-4">1961</td>
      
       </tr>
       <tr class="govuk-table__row">
@@ -112,7 +111,7 @@
       </td>
       <td class="govuk-table__cell govuk-!-padding-top-4">COAL 80/80/14</td>
       <td class="govuk-table__cell govuk-!-padding-top-4">Content: Folio 39. Letter from John Hill Robey, Newcastle under Lyme, to the Poor Law Commission stating that 'we' [unspecified] were anxiously waiting for the result of the deliberations of the Poor Law Commission with respect to the appointment of officers to carry out the requirements of the Registration Act in the district of Newcastle under Lyme, Burslem, Wolstanton, Audley, Betley, Keele and Madeley. Annotated: that all appointments were subsequently filled. Paper Number: 5538/C/1837. Poor Law Union Number 421. Counties: Staffordshire </td> 
-      <td class="govuk-table__cell govuk-!-padding-top-4">1960</td>
+      <td class="govuk-table__cell govuk-!-padding-top-4">1963</td>
      
       </tr>
       <tr class="govuk-table__row">
@@ -140,7 +139,7 @@
       </td>
       <td class="govuk-table__cell govuk-!-padding-top-4">COAL 80/80/16</td>
       <td class="govuk-table__cell govuk-!-padding-top-4">Content: Folios 41-42. Letter from Weston Yonge, of Charnes Hall, Stafford, to the Poor Law Commission, recommending Mr Short [Charles Short] of Betley, Surgeon, for the office of registrar of the union about to be formed [Newcastle under Lyme]. Annotated: Mr Short's name had been inserted as Registrar for the Audley District, but the appointment had not yet been declared. Mr Short's Christian name was required. Paper Number: 5658/C/1837. Poor Law Union Number 421. Counties: Staffordshire.</td> 
-      <td class="govuk-table__cell govuk-!-padding-top-4">1960</td>
+      <td class="govuk-table__cell govuk-!-padding-top-4">1962</td>
       </tr>
      
     </tbody>
@@ -150,13 +149,13 @@
 
 {{ govukPagination({
   previous: {
-    href: "search-results"
+    href: "search-results-add-work-set"
   },
   items: [
     {
       number: 1,
      
-      href: "search-results"
+      href: "search-results-add-work-set"
     },
     {
       number: 2,
@@ -167,31 +166,7 @@
   ]
 }) }}
 
-  
-{{ govukRadios({
-  name: "searchResultsAction",
-  fieldset: {
-    legend: {
-      text: "What do you want to do next?",
-    
-      classes: "govuk-fieldset__legend--s"
-    }
-  },
-  items: [
-  {
-    value: "Add selected records to an existing Work Set",
-    text: "Add selected records to an existing Work Set"
-  },
-  {
-    value: "Add selected records to a new Work Set",
-    text: "Add selected records to a new Work Set"
-  }
-
- 
-
-  ]
-}) }}
-
+<form action="view-work-set-added-message"  method="post">
 {% from "govuk/components/button/macro.njk" import govukButton %}
 {{ govukButton({
   text: "Continue"

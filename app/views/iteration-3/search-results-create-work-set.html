@@ -38,8 +38,8 @@
   <div class="govuk-grid-column-full">
   
 
-      <h1 class="govuk-heading-l govuk-!-margin-top-8" id="tblDesc"><span class="govuk-caption-l">Add to Work Set: [workset name]</span>Search results</h1>
-      <p class="govuk-body">Page 1 of 2</p>
+      <h1 class="govuk-heading-l govuk-!-margin-top-8" id="tblDesc"><span class="govuk-caption-l">Select records for a new Work Set</span>Search results</h1>
+      <p class="govuk-body">Dispalying 1 - 50 of 1000 results</p>
 
       <div class="govuk-checkboxes__item govuk-checkboxes--small">
         <input class="govuk-checkboxes__input"  id="selectAll" name="selectAll" type="checkbox" value="selectAll">
@@ -231,11 +231,9 @@ text: "Their names were as follows: 1. Ralph Sneyd. 2. Henry Turton, Minister of
   {% from "govuk/components/pagination/macro.njk" import govukPagination %}
 
 {{ govukPagination({
-  previous: {
-    href: "#"
-  },
+
   next: {
-    href: "search-results-2"
+    href: "search-results-create-work-set-2"
   },
   items: [
     {
@@ -256,11 +254,6 @@ text: "Their names were as follows: 1. Ralph Sneyd. 2. Henry Turton, Minister of
 {{ govukButton({
   text: "Create new Work Set"
 }) }}
-
-
-
-
-
 </form>
 </div>
 </div>

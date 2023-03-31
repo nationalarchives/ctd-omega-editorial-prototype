@@ -36,8 +36,8 @@
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-full">
 
-      <h1 class="govuk-heading-l" id="tblDesc">Search results</h1>
-      <p class="govuk-body">Page 2 of 2</p>
+          <h1 class="govuk-heading-l govuk-!-margin-top-8" id="tblDesc"><span class="govuk-caption-l">Select records for a new Work Set</span>Search results</h1>
+      <p class="govuk-body">displaying 51 - 100 of 1000 results</p>
 
     <div class="govuk-checkboxes__item govuk-checkboxes--small">
       <input class="govuk-checkboxes__input" id="selectAll" name="selectAll" type="checkbox" value="selectAll">
@@ -167,14 +167,11 @@
   ]
 }) }}
 
-
-
-<form action="create-work-set.html"  method="post">
-{% from "govuk/components/button/macro.njk" import govukButton %}
+<form action="create-work-set"  method="post">
+  {% from "govuk/components/button/macro.njk" import govukButton %}
 {{ govukButton({
-  text: "Continue"
+  text: "Create new Work Set"
 }) }}
-
 </form>
 </div>
 </div>
