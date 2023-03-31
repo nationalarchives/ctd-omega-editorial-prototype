@@ -29,31 +29,50 @@
       <h1 class="govuk-heading-l">
         Abandon Work Set
       </h1>
+
+      {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+
+{{ govukSummaryList({
+  rows: [
+    {
+      key: {
+        text: "Work Set Name"
+      },
+      value: {
+        text: "COAL 80 Sample"
+      }
+  
+    },
+    {
+      key: {
+        text: "Size of Work Set"
+      },
+      value: {
+        text: "3"
+      }
+    },
+    {
+      key: {
+        text: "Work Set Created"
+      },
+      value: {
+        html: "	22 Oct 2022"
+      }
+ 
+    },
+    {
+      key: {
+        text: "Work Set Updated"
+      },
+      value: {
+        html: '10 Nov 2022 13:04'
+      }
+    
+    }
+  ]
+}) }}
    
-      <table class="govuk-table">
-        <thead class="govuk-table__head">
-          <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header app-custom-class">Work Set Name</th>
-            <th scope="col" class="govuk-table__header app-custom-class">Size</th>
-            <th scope="col" class="govuk-table__header app-custom-class">Created</th>
-            <th scope="col" class="govuk-table__header app-custom-class">Updated</th>
-           
-          </tr>
-        </thead>
-        <tbody class="govuk-table__body">
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header">
-                 COAL 80 Sample 
-             </th>
-            <td class="govuk-table__cell">3</td>
-            <td class="govuk-table__cell">22 Oct 2022</td>
-            <td class="govuk-table__cell">10 Nov 2022 13:04</td>
-           
-           
-          </tr>
-         
-        </tbody>
-      </table>
+     
 
   {% from "govuk/components/radios/macro.njk" import govukRadios %}
 {{ govukRadios({
@@ -61,7 +80,7 @@
   name: "abandonWorkSet",
   fieldset: {
     legend: {
-      text: "Are you sure you want to abandon the selected Edit Sets?",
+      text: "Are you sure you want to abandon the selected Work Set?",
       classes: "govuk-fieldset__legend--s"
     }
   },
