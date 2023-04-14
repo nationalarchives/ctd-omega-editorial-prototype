@@ -9,11 +9,30 @@
 {% endblock %}
 
 {% block content %}
+{{ govukBreadcrumbs({
+  collapseOnMobile: true,
+  items: [
+    {
+      text: "Dashboard",
+      href: "dashboard"
+    },
+    {
+      text: "Search: Add records to new work set",
+      href: "search-results-create-work-set"
+     
+    },
+    {
+      text: "Create a new Work Set"
+     
+     
+    }
+  ]
+}) }}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+
 
 <form class="form" action="view-work-set-added-message" method="post">
   <fieldset class="govuk-fieldset">
@@ -33,11 +52,8 @@
       <label class="govuk-label govuk-label--s" for="sort">
         Owner (person who will be assigned this work set on creation)
       </label>
-      <select class="govuk-select" id="sort" name="sort">
-        <option value="published">Assign to you (Sarah Brown)</option>
-        <option value="published">Meera Syal</option> 
-       <option value="published">John Hedges</option> 
-       <option value="published">Jane Smith</option> 
+      <select class="govuk-select" id="sort" name="sort" disabled="true">
+        <option value="published">Sarah Brown</option>
       </select>
     </div>
 

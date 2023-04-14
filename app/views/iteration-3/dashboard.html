@@ -1,4 +1,4 @@
-{% extends "../layout_unbranded.html" %}
+{% extends "../layout_unbranded-dashboard.html" %}
 
 {% block pageTitle %}
   Browse Edit Set – {{ serviceName }} – GOV.UK Prototype Kit
@@ -34,6 +34,7 @@
         <button class="govuk-button na-search__button" data-module="govuk-button">
           Search
         </button>
+      
       </form>
       </div>
       </div>
@@ -85,6 +86,9 @@
     </tbody>
   </table>
 
+  <button disabled="disabled" aria-disabled="true" class="govuk-button govuk-button--disabled" data-module="govuk-button">
+    Upload Work Set
+  </button>
 </div>
 </div>
 
