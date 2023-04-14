@@ -17,9 +17,12 @@
 <h1 class="govuk-heading-l">COAL 80/80/1</h1>
 <h2 class="govuk-heading-m">PAC-ID: COAL.2022.V5RJW.P Physical Record</h2>
 <p class="govuk-body">Series: National Coal Board and predecessors: Photographs</p>
+<p class="govuk-body">Piece: COAL 80/80 - Bedlington 'D' Colliery, Newcastle Upon Tyne. Described at item level.</p>
 <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
 
+
+  
 
 <form class="form" action="edit-record-action" method="post">
 
@@ -32,7 +35,7 @@
 
     <div class="govuk-form-group">
       <label class="govuk-label" for="event-name">
-        Title
+        Title (optional)
       </label>
       <input class="govuk-input" id="title" name="title" type="text">
     </div>
@@ -174,15 +177,14 @@
       <label class="govuk-label" for="former-reference-pro">Former archival reference (optional)</label>
       <input class="govuk-input govuk-input--width-20" id="former-reference-pro" name="former-reference-pro" type="text">
     </div>
-
-  
-
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="admin-biog-background">Administrative / biographical background (optional)</label>
+      <textarea class="govuk-textarea" id="admin-biog-background" name="admin-biog-background" rows="5"></textarea>
+    </div>
     <div class="govuk-form-group">
       <label class="govuk-label" for="custodial-history">Custodial History (optional)</label>
       <textarea class="govuk-textarea" id="custodial-history" name="scope-content" rows="5"></textarea>
     </div>
-
-  
 
     <div class="govuk-form-group">
       <label class="govuk-label" for="custodial-history">Note (optional)</label>
@@ -191,10 +193,7 @@
 
    
 
-    <div class="govuk-form-group">
-      <label class="govuk-label" for="admin-biog-background">Administrative / biographical background (optional)</label>
-      <textarea class="govuk-textarea" id="admin-biog-background" name="admin-biog-background" rows="5"></textarea>
-    </div>
+  
 
 
   </fieldset>
@@ -253,11 +252,10 @@
           <button class="govuk-button" data-module="govuk-button" name="action" value="save">
             Save changes
           </button>
-      
-          <a class="govuk-link govuk-link--secondary" href="edit-record-discarded">
-            Discard changes
-          </a>
         </div>
+        <a class="govuk-link govuk-link--secondary" href="edit-record-discarded">
+          Discard changes
+        </a>
         </form>
 
   </div>
