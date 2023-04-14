@@ -8,22 +8,33 @@
 
 
 {% block content %}
-{% from "govuk/components/details/macro.njk" import govukDetails %}
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
 
-
+{{ govukBreadcrumbs({
+  collapseOnMobile: true,
+  items: [
+    {
+      text: "Dashboard",
+      href: "dashboard"
+    },
+    {
+      text: "Search: Add records to new work set"
+     
+    }
+  ]
+}) }}
 
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-    <a class="govuk-back-link"
-    href="javascript:history.back()">Back</a>
+ 
     <div class="moj-search govuk-!-margin-top-8">
       <form action="search-results" class="na-search__form" method="post">
         <div class="govuk-form-group na-search__group">
           <label class="govuk-label na-search__label" for="search">
         Search the records again
           </label>
-          <input class="govuk-input na-search__input" id="search" name="search" type="search" aria-describedby="search-hint">
+          <input class="govuk-input na-search__input" id="search" name="search" type="search" value="Coal" aria-describedby="search-hint">
         </div>
         <button class="govuk-button na-search__button" data-module="govuk-button">
           Search
@@ -39,7 +50,7 @@
   
 
       <h1 class="govuk-heading-l govuk-!-margin-top-8" id="tblDesc"><span class="govuk-caption-l">Select records for a new Work Set</span>Search results</h1>
-      <p class="govuk-body">Dispalying 1 - 50 of 1000 results</p>
+      <p class="govuk-body">Displaying 1 - 50 of 1000 results</p>
 
       <div class="govuk-checkboxes__item govuk-checkboxes--small">
         <input class="govuk-checkboxes__input"  id="selectAll" name="selectAll" type="checkbox" value="selectAll">
@@ -94,7 +105,7 @@
   text: "The inhabitants desired to remedy this situation by appointing paid officers, but given the expense of this, Mr Phillips had been asked to enquire whether any new arrangements they made would interfere with plans for dealing with the poor under the Poor Law Amendment Act. He wished to know how soon new arrangements might come into force and requested advice on what course should be adopted in the meantime. Annotated: that by mistake the letter had never been answered. [Folio 1 is the year guard.] Poor Law Union Number 421. Counties: Staffordshire.
   "
 }) }} </td>  
-<td class="govuk-table__cell govuk-!-padding-top-4">1960</td>
+<td class="govuk-table__cell govuk-!-padding-top-4">1962</td>
        
       </tr>
       <tr class="govuk-table__row">
@@ -147,7 +158,7 @@ text: "The inhabitants desired to remedy this situation by appointing paid offic
       <td class="govuk-table__cell govuk-!-padding-top-4">COAL 80/80/4</td>
       <td class="govuk-table__cell govuk-!-padding-top-4">Content: Folio 21. Letter from Joseph Hunt, of Newcastle under Lyme, to the Poor Law Commission, soliciting for the post of registrar under the new Marriage Act. He promised to forward testimonials from the most respectable inhabitants but was in the first instance asking how best to proceed in his application. Annotated: 'Usual Answer'. Paper Number: 4253/C/1837. Poor Law Union Number 421. Counties: Staffordshire."
 </td> 
-      <td class="govuk-table__cell govuk-!-padding-top-4">1960</td>
+      <td class="govuk-table__cell govuk-!-padding-top-4">1961</td>
      
       </tr>
       <tr class="govuk-table__row">
@@ -161,7 +172,7 @@ text: "The inhabitants desired to remedy this situation by appointing paid offic
       </td>
       <td class="govuk-table__cell govuk-!-padding-top-4">COAL 80/80/5</td>
       <td class="govuk-table__cell govuk-!-padding-top-4">Content: Folio 22. Draft letter from the Poor Law Commission to Joseph Hunt, Newcastle under Lyme, acknowledging receipt of his letter seeking appointment as Registrar of Births, Deaths and Marriages for the district of Newcastle under Lyme and informing him that it had been read and recorded. Paper Number: 4235/C/1837. Poor Law Union Number 421. Counties: Staffordshire. </td> 
-      <td class="govuk-table__cell govuk-!-padding-top-4">1960</td>
+      <td class="govuk-table__cell govuk-!-padding-top-4">1962</td>
      
       </tr>
       <tr class="govuk-table__row">
@@ -209,7 +220,7 @@ text: "Their names were as follows: 1. Ralph Sneyd. 2. Henry Turton, Minister of
       </td>
       <td class="govuk-table__cell govuk-!-padding-top-4">COAL 80/80/9</td>
       <td class="govuk-table__cell govuk-!-padding-top-4">Content: Folios 33-34. Letter from William Hallam, surgeon and apothecary, Newcastle under Lyme, to the Poor Law Commission stating that as no union had been formed covering Newcastle under Lyme, and there was a need for a registrar under the act coming into force on July 1 1837, he was offering himself as a candidate. Annotated: usual answer. Paper Number: 5753/C/1837. Poor Law Union Number 421. Counties: Staffordshire.</td> 
-      <td class="govuk-table__cell govuk-!-padding-top-4">1960</td>
+      <td class="govuk-table__cell govuk-!-padding-top-4">1963</td>
      
       </tr>
       <tr class="govuk-table__row">
@@ -223,7 +234,7 @@ text: "Their names were as follows: 1. Ralph Sneyd. 2. Henry Turton, Minister of
       </td>
       <td class="govuk-table__cell govuk-!-padding-top-4">COAL 80/80/10</td>
       <td class="govuk-table__cell govuk-!-padding-top-4">Content: Folio 35. Draft letter from the Poor Law Commission to William Hallam, of Newcastle under Lyme, who had applied for the position of superintendent registrar for that town, acknowledging his letter and advising him that he should apply instead to the Registrar General. Paper Number: 5153/C/1837. Poor Law Union Number 421. Counties: Staffordshire. </td> 
-      <td class="govuk-table__cell govuk-!-padding-top-4">1960</td>
+      <td class="govuk-table__cell govuk-!-padding-top-4">1961</td>
      </tr>
     </tbody>
   </table>
@@ -252,7 +263,7 @@ text: "Their names were as follows: 1. Ralph Sneyd. 2. Henry Turton, Minister of
 <form action="create-work-set"  method="post">
   {% from "govuk/components/button/macro.njk" import govukButton %}
 {{ govukButton({
-  text: "Create new Work Set"
+  text: "Continue"
 }) }}
 </form>
 </div>

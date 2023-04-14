@@ -9,20 +9,30 @@
 
 {% block content %}
 {% from "govuk/components/details/macro.njk" import govukDetails %}
-
+{{ govukBreadcrumbs({
+  collapseOnMobile: true,
+  items: [
+    {
+      text: "Dashboard",
+      href: "dashboard"
+    },
+    {
+      text: "Search: Add records to existing work set",
+      href: "#"
+    }
+  ]
+}) }}
 
     
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-    <a class="govuk-back-link"
-    href="javascript:history.back()">Back</a>
     <div class="moj-search govuk-!-margin-top-8">
       <form action="search-results" class="na-search__form" method="post">
         <div class="govuk-form-group na-search__group">
           <label class="govuk-label na-search__label" for="search">
         Search the records
           </label>
-          <input class="govuk-input na-search__input" id="search" name="search" type="search" aria-describedby="search-hint">
+          <input class="govuk-input na-search__input" id="search" name="search" value="Coal" type="search" aria-describedby="search-hint">
         </div>
         <button class="govuk-button na-search__button" data-module="govuk-button">
           Search

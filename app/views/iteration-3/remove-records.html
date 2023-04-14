@@ -22,14 +22,14 @@
 {% block content %}
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+  <div class="govuk-grid-column-full">
 
 <form class="form" action="view-work-set-removed-message" method="post">
   <span class="govuk-caption-xl">COAL 80 Sample</span>
       <h1 class="govuk-heading-l">
         Remove records from Work Set
       </h1>
-   <p class="govuk-body">1 record selected</p>
+   <p class="govuk-body">9 record selected</p>
 
    <table class="govuk-table" data-module="moj-sortable-table">
     <caption class="govuk-table__caption govuk-table__caption--s">National Coal Board and Predecessors: Photographs
@@ -54,8 +54,117 @@
         <td class="govuk-table__cell govuk-!-padding-top-4">1960</td>
        
       </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+         
+           COAL 80/80/1
+        
+      </td>
+        <td class="govuk-table__cell govuk-!-padding-top-4">Bedlington colliery, Newcastle Upon Tyne, Photograph depicting: view of pithead baths.</td>
+        <td class="govuk-table__cell govuk-!-padding-top-4">1960</td>
+       
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+         
+           COAL 80/80/1
+        
+      </td>
+        <td class="govuk-table__cell govuk-!-padding-top-4">Bedlington colliery, Newcastle Upon Tyne, Photograph depicting: view of pithead baths.</td>
+        <td class="govuk-table__cell govuk-!-padding-top-4">1960</td>
+       
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+         
+           COAL 80/80/1
+        
+      </td>
+        <td class="govuk-table__cell govuk-!-padding-top-4">Bedlington colliery, Newcastle Upon Tyne, Photograph depicting: view of pithead baths.</td>
+        <td class="govuk-table__cell govuk-!-padding-top-4">1960</td>
+       
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+         
+           COAL 80/80/1
+        
+      </td>
+        <td class="govuk-table__cell govuk-!-padding-top-4">Bedlington colliery, Newcastle Upon Tyne, Photograph depicting: view of pithead baths.</td>
+        <td class="govuk-table__cell govuk-!-padding-top-4">1960</td>
+       
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+         
+           COAL 80/80/1
+        
+      </td>
+        <td class="govuk-table__cell govuk-!-padding-top-4">Bedlington colliery, Newcastle Upon Tyne, Photograph depicting: view of pithead baths.</td>
+        <td class="govuk-table__cell govuk-!-padding-top-4">1960</td>
+       
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+         
+           COAL 80/80/1
+        
+      </td>
+        <td class="govuk-table__cell govuk-!-padding-top-4">Bedlington colliery, Newcastle Upon Tyne, Photograph depicting: view of pithead baths.</td>
+        <td class="govuk-table__cell govuk-!-padding-top-4">1960</td>
+       
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+         
+           COAL 80/80/1
+        
+      </td>
+        <td class="govuk-table__cell govuk-!-padding-top-4">Bedlington colliery, Newcastle Upon Tyne, Photograph depicting: view of pithead baths.</td>
+        <td class="govuk-table__cell govuk-!-padding-top-4">1960</td>
+       
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+         
+           COAL 80/80/1
+        
+      </td>
+        <td class="govuk-table__cell govuk-!-padding-top-4">Bedlington colliery, Newcastle Upon Tyne, Photograph depicting: view of pithead baths.</td>
+        <td class="govuk-table__cell govuk-!-padding-top-4">1960</td>
+       
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+         
+           COAL 80/80/1
+        
+      </td>
+        <td class="govuk-table__cell govuk-!-padding-top-4">Bedlington colliery, Newcastle Upon Tyne, Photograph depicting: view of pithead baths.</td>
+        <td class="govuk-table__cell govuk-!-padding-top-4">1960</td>
+       
+      </tr>
     </tbody>
   </table>
+
+  {{ govukPagination({
+    previous: {
+      href: "search-results-add-work-set"
+    },
+    items: [
+      {
+        number: 1,
+        current: true,
+        href: "#"
+      },
+      {
+        number: 2,
+      
+        href: "#"
+      }
+    
+    ]
+  }) }}
 
   {% from "govuk/components/radios/macro.njk" import govukRadios %}
 {{ govukRadios({
