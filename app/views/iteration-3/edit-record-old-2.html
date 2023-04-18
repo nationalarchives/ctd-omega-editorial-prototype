@@ -151,71 +151,22 @@
       </select>
     </div>
 
-    <h2 class="govuk-heading-m" id="context" name="context">Context</h2>
-    <h3 class="govuk-heading-s" id="context" name="context">Creators you have added</h4>
+    <h3 class="govuk-heading-m" id="context" name="context">Context</h3>
 
-    {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
-
-{{ govukSummaryList({
-  rows: [
-    {
-      key: {
-        text: "National Coal Board"
-      },
-      value: {
-        text: "1960"
-      },
-      actions: {
-        items: [
-          {
-            href: "#",
-            text: "Remove",
-            visuallyHiddenText: " National Coal Board"
-          }
-        ]
-      }
-    },
-    {
-      key: {
-        text: "Transport for London"
-      },
-      value: {
-        text: "2020 - 2021"
-      },
-      actions: {
-        items: [
-          {
-            href: "#",
-            text: "Remove",
-            visuallyHiddenText: " Transport for London"
-          }
-        ]
-      }
-    },
-    {
-      key: {
-        text: "Post office"
-      },
-      value: {
-        html: "2021"
-      },
-      actions: {
-        items: [
-          {
-            href: "#",
-            text: "Remove",
-            visuallyHiddenText: " Post Office"
-          }
-        ]
-      }
-    }
-  ]
-}) }}
-
-   
-     
-     <p class="govuk-body govuk-!-margin-bottom-9"><a href="add-creator-table" class="govuk-link">Add a creator</a></p>
-    
+    <div id="select-creator" class="govuk-form-group">
+      <label class="govuk-label" for="sort">
+        Select creator
+      </label>
+      <select class="govuk-select" id="sort" name="sort">
+        <option value="published">National Coal Board</option>
+        <option value="updated">Transport for London</option>
+        <option value="post office">Post Office</option>
+      </select>
+      <button class="govuk-button govuk-button--secondary" data-module="govuk-button" name="action" value="remove-creator">Remove</button>
+      <button class="govuk-button" data-module="govuk-button" name="action" value="add-creator">
+        Add another
+      </button>
+    </div>
 
     <div class="govuk-form-group">
       <label class="govuk-label" for="former-reference-dept">Former reference in its original department (optional)</label>

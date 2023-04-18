@@ -1,0 +1,218 @@
+{% extends "../layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Browse Edit Set – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+
+
+
+{% block content %}
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+
+{{ govukBreadcrumbs({
+  collapseOnMobile: true,
+  items: [
+    {
+      text: "Dashboard",
+      href: "dashboard"
+    },
+    {
+      text: "Edit record",
+      href: "edit-record"
+    },
+    {
+      text: "Add creators"
+     
+    }
+  ]
+}) }}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+ 
+    <div class="moj-search govuk-!-margin-top-8">
+      <form action="search-results" class="na-search__form" method="post">
+        <div class="govuk-form-group na-search__group">
+          <label class="govuk-label na-search__label" for="search">
+        Search for a creator
+          </label>
+          <input class="govuk-input na-search__input" id="search" name="search" type="search" value="Coal" aria-describedby="search-hint">
+        </div>
+        <button class="govuk-button na-search__button" data-module="govuk-button">
+          Search
+        </button>
+      </form>
+      </div>
+      </div>
+      </div>
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+  
+
+      <h1 class="govuk-heading-l govuk-!-margin-top-8" id="tblDesc"><span class="govuk-caption-l">Select creators to add to record</span>Search results</h1>
+      <p class="govuk-body">Displaying 1 - 50 of 9000 results</p>
+
+      <div class="govuk-checkboxes__item govuk-checkboxes--small">
+        <input class="govuk-checkboxes__input"  id="selectAll" name="selectAll" type="checkbox" value="selectAll">
+        <label class="govuk-label govuk-checkboxes__label" for="pacid1">
+        Select all / deselect all
+        </label>
+      </div>
+  
+  <table class="govuk-table sortable" aria-describedby="tblDesc">
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header app-custom-class table-col-l" aria-sort="ascending">Creator name
+          <button>
+          <span aria-hidden="true"></span>
+        </button>
+      </th>
+        <th scope="col" class="govuk-table__header app-custom-class table-col-s" aria-sort="ascending">Date
+          <button> 
+          <span aria-hidden="true"></span>
+        </button></th>
+  
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body govuk-!-font-size-16">
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item govuk-checkboxes--small">
+          <input class="govuk-checkboxes__input" id="pacid1" name="pacid1" type="checkbox" value="pacid1">
+          <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-16" for="pacid1">
+            Dental Estimates Board
+          </label>
+        </div>
+      </td>
+        <td class="govuk-table__cell govuk-!-padding-top-4">1948-1989</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item govuk-checkboxes--small">
+          <input class="govuk-checkboxes__input" id="pacid1" name="pacid1" type="checkbox" value="pacid1">
+          <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-16" for="pacid1">
+            Department of Environment, Food and Rural Affairs, Global Atmosphere
+          </label>
+        </div>
+      </td>
+        <td class="govuk-table__cell govuk-!-padding-top-4">2000-2014</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item govuk-checkboxes--small">
+          <input class="govuk-checkboxes__input" id="pacid1" name="pacid1" type="checkbox" value="pacid1">
+          <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-16" for="pacid1">
+            Department for Business, Energy and Industrial Strategy
+          </label>
+        </div>
+      </td>
+        <td class="govuk-table__cell govuk-!-padding-top-4">2016-present</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item govuk-checkboxes--small">
+          <input class="govuk-checkboxes__input" id="pacid1" name="pacid1" type="checkbox" value="pacid1">
+          <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-16" for="pacid1">
+            Department for Business, Enterprise and Regulatory Reform
+          </label>
+        </div>
+      </td>
+        <td class="govuk-table__cell govuk-!-padding-top-4">2007-2009</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item govuk-checkboxes--small">
+          <input class="govuk-checkboxes__input" id="pacid1" name="pacid1" type="checkbox" value="pacid1">
+          <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-16" for="pacid1">
+            Department for Business, Innovation and Skills
+          </label>
+        </div>
+      </td>
+        <td class="govuk-table__cell govuk-!-padding-top-4">2009-2016</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item govuk-checkboxes--small">
+          <input class="govuk-checkboxes__input" id="pacid1" name="pacid1" type="checkbox" value="pacid1">
+          <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-16" for="pacid1">
+            Department for Children, Schools and Families
+          </label>
+        </div>
+      </td>
+        <td class="govuk-table__cell govuk-!-padding-top-4">2007-2010</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item govuk-checkboxes--small">
+          <input class="govuk-checkboxes__input" id="pacid1" name="pacid1" type="checkbox" value="pacid1">
+          <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-16" for="pacid1">
+            Department for Communities and Local Government
+          </label>
+        </div>
+      </td>
+        <td class="govuk-table__cell govuk-!-padding-top-4">2006-2018</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item govuk-checkboxes--small">
+          <input class="govuk-checkboxes__input" id="pacid1" name="pacid1" type="checkbox" value="pacid1">
+          <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-16" for="pacid1">
+            Department for Constitutional Affairs
+          </label>
+        </div>
+      </td>
+        <td class="govuk-table__cell govuk-!-padding-top-4">2003-2007</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item govuk-checkboxes--small">
+          <input class="govuk-checkboxes__input" id="pacid1" name="pacid1" type="checkbox" value="pacid1">
+          <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-16" for="pacid1">
+            Department for Culture, Media and Sport
+          </label>
+        </div>
+      </td>
+        <td class="govuk-table__cell govuk-!-padding-top-4">1997-2017</td>
+      </tr>
+    
+    
+ 
+     
+    </tbody>
+  </table>
+
+  {% from "govuk/components/pagination/macro.njk" import govukPagination %}
+
+{{ govukPagination({
+
+  next: {
+    href: "search-results-create-work-set-2"
+  },
+  items: [
+    {
+      number: 1,
+      current: true,
+      href: "#"
+    },
+    {
+      number: 2,
+      href: "search-results-create-work-set-2"
+    }
+  ]
+}) }}
+
+
+<form action="edit-record"  method="post">
+  {% from "govuk/components/button/macro.njk" import govukButton %}
+{{ govukButton({
+  text: "Continue"
+}) }}
+</form>
+</div>
+</div>
+{% endblock %}
+
