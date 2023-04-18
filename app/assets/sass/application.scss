@@ -125,6 +125,13 @@ margin-top:14px;
 }
 
 
+
+// unavailable results
+
+.result-unavailable {
+ color:  #505a5f;
+}
+
 // Sortable tables
 
 
@@ -178,7 +185,7 @@ table.govuk-table.sortable th[aria-sort="ascending"] span::after {
 }
 
 table.govuk-table.show-unsorted-icon th:not([aria-sort]) button span::after {
-  content: "♢";
+  content: "A";
   font-size: 100%;
   position: relative;
   top: -3px;
