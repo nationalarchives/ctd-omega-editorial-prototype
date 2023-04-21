@@ -11,8 +11,21 @@
 
 
 
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
 
-<a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{{ govukBreadcrumbs({
+  collapseOnMobile: true,
+  items: [
+    {
+      text: "Dashboard",
+      href: "dashboard"
+    },
+    {
+      text: "View Work Set"
+     
+    }
+  ]
+}) }}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">

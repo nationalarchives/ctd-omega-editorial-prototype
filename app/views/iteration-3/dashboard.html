@@ -22,8 +22,8 @@
 {% block content %}
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
-    <div class="moj-search">
+  <div class="govuk-grid-column-three-quarters">
+    
       <form action="search-results-create-work-set" class="na-search__form" method="post">
         <div class="govuk-form-group na-search__group">
           <label class="govuk-label na-search__label" for="search">
@@ -34,15 +34,18 @@
         <button class="govuk-button na-search__button" data-module="govuk-button">
           Search
         </button>
-      
       </form>
       </div>
-      </div>
+      <div class="govuk-grid-column-one-quarter">
+        <button disabled="disabled" aria-disabled="true" class="govuk-button govuk-button--disabled govuk-!-margin-top-6" data-module="govuk-button">
+          Upload Work Set
+        </button>
+        </div>
       </div>
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
       <h1 class="govuk-heading-l govuk-!-margin-top-8">Dashboard</h1>
-      <p class="govuk=body">Showing 1 to 3 of 3 Work Sets</p>
+      <p class="govuk=body">Showing 1 to 10 of 13 Work Sets</p>
   <table class="govuk-table sortable">
     <thead class="govuk-table__head">
       <tr class="govuk-table__row">
@@ -58,7 +61,6 @@
         <th scope="col" class="govuk-table__header app-custom-class table-col-m">Work Set Updated
           <button><span aria-hidden="true"></span></button>
         </th>
-      
       </tr>
     </thead>
     <tbody class="govuk-table__body govuk-!-font-size-16">
@@ -83,12 +85,80 @@
         <td class="govuk-table__cell">14 Dec 2022</td>
         <td class="govuk-table__cell">3 Jan 2023 16:36</td>
       </tr>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"> <a class="govuk-link" href="view-work-set">HCA 32 9YW new items K and L ships</a></td>
+
+        <td class="govuk-table__cell">93</td>
+        <td class="govuk-table__cell">31 Mar 2023</td>
+        <td class="govuk-table__cell">3 Apr 2023</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"> <a class="govuk-link" href="view-work-set">Batch 36 Website Clear Up</a></td>
+
+        <td class="govuk-table__cell">15</td>
+        <td class="govuk-table__cell">29 Jul 2022</td>
+        <td class="govuk-table__cell">0 Aug 2022</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"> <a class="govuk-link" href="view-work-set">FCO 193</a></td>
+
+        <td class="govuk-table__cell">1</td>
+        <td class="govuk-table__cell">5 Jan 2022</td>
+        <td class="govuk-table__cell">6 Jan 2022</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"> <a class="govuk-link" href="view-work-set">WA 21 (1-26)</a></td>
+
+        <td class="govuk-table__cell">26</td>
+        <td class="govuk-table__cell">12 Jan 2022</td>
+        <td class="govuk-table__cell">7 Dec 2022</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"> <a class="govuk-link" href="view-work-set">Batch 36 Website Clear Up</a></td>
+
+        <td class="govuk-table__cell">54</td>
+        <td class="govuk-table__cell">29 Jul 2022</td>
+        <td class="govuk-table__cell">30 Nov 2022</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">   <a class="govuk-link" href="view-work-set">Web Archive_Outstanding Sites</a></td>
+        <td class="govuk-table__cell">963</td>
+        <td class="govuk-table__cell">30 Aug 2022</td>
+        <td class="govuk-table__cell">1 Sep 2022 13:04</td>
+
+       
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"> <a class="govuk-link" href="view-work-set">PF 321 New Series</a></td>
+        <td class="govuk-table__cell">14</td>
+        <td class="govuk-table__cell">29 Nov 2022</td>
+        <td class="govuk-table__cell">31 Jan 2022</td>
+      </tr>
     </tbody>
   </table>
 
-  <button disabled="disabled" aria-disabled="true" class="govuk-button govuk-button--disabled" data-module="govuk-button">
-    Upload Work Set
-  </button>
+  {% from "govuk/components/pagination/macro.njk" import govukPagination %}
+
+  {{ govukPagination({
+  
+    next: {
+      href: "dashboard-2"
+    },
+    items: [
+      {
+        number: 1,
+        current: true,
+        href: "#"
+      },
+      {
+        number: 2,
+        href: "dashboard-2"
+      }
+    ]
+  }) }}
+
+
 </div>
 </div>
 
