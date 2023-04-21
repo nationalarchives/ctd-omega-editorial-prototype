@@ -1,0 +1,118 @@
+{% extends "../layout_unbranded-dashboard.html" %}
+
+{% block pageTitle %}
+  Browse Edit Set – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<!--
+  <div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+  </div>
+  -->
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-three-quarters">
+    
+      <form action="search-results-create-work-set" class="na-search__form" method="post">
+        <div class="govuk-form-group na-search__group">
+          <label class="govuk-label na-search__label" for="search">
+        Search the records and add to new Work Set
+          </label>
+          <input class="govuk-input na-search__input" id="search" name="search" type="search" aria-describedby="search-hint">
+        </div>
+        <button class="govuk-button na-search__button" data-module="govuk-button">
+          Search
+        </button>
+      
+      </form>
+    
+      </div>
+      <div class="govuk-grid-column-one-quarter">
+        <button disabled="disabled" aria-disabled="true" class="govuk-button govuk-button--disabled govuk-!-margin-top-6" data-module="govuk-button">
+          Upload Work Set
+        </button>
+        </div>
+      </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-l govuk-!-margin-top-8">Dashboard</h1>
+      <p class="govuk=body">Showing 11 to 13 of 13 Work Sets</p>
+  <table class="govuk-table sortable">
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header app-custom-class table-col-l">Work Set Name
+          <button><span aria-hidden="true"></span></button>
+        </th>
+        <th scope="col" class="govuk-table__header app-custom-class table-col-m">Size of Work Set
+          <button><span aria-hidden="true"></span></button>
+        </th>
+        <th scope="col" class="govuk-table__header app-custom-class table-col-m">Work Set Created
+          <button><span aria-hidden="true"></span></button>
+        </th>
+        <th scope="col" class="govuk-table__header app-custom-class table-col-m">Work Set Updated
+          <button><span aria-hidden="true"></span></button>
+        </th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body govuk-!-font-size-16">
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"> <a class="govuk-link" href="view-work-set">NK 117 New Series</a></td>
+
+        <td class="govuk-table__cell">147</td>
+        <td class="govuk-table__cell">29 Nov 2022</td>
+        <td class="govuk-table__cell">31 Jan 2023</td>
+      </tr>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"> <a class="govuk-link" href="view-work-set">MAF792(1-6)</a></td>
+
+        <td class="govuk-table__cell">6</td>
+        <td class="govuk-table__cell">7 Dec 2022</td>
+        <td class="govuk-table__cell">1 Apr 2023</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"> <a class="govuk-link" href="view-work-set">JA1038(1-38)</a></td>
+
+        <td class="govuk-table__cell">38</td>
+        <td class="govuk-table__cell">9 Feb 2023</td>
+        <td class="govuk-table__cell">6 Mar 2023</td>
+      </tr>
+    </tbody>
+  </table>
+
+  {% from "govuk/components/pagination/macro.njk" import govukPagination %}
+
+  {{ govukPagination({
+  
+    previous: {
+      href: "dashboard"
+    },
+    items: [
+      {
+        number: 1,
+        href: "dashboard"
+      },
+      {
+        number: 2,
+        href: "#"
+      }
+    ]
+  }) }}
+
+ 
+</div>
+</div>
+
+
+{% endblock %}

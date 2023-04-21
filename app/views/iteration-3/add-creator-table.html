@@ -33,12 +33,12 @@
   <div class="govuk-grid-column-full">
  
     <div class="moj-search govuk-!-margin-top-8">
-      <form action="search-results" class="na-search__form" method="post">
+      <form action="#" class="na-search__form" method="post">
         <div class="govuk-form-group na-search__group">
           <label class="govuk-label na-search__label" for="search">
         Search for a creator
           </label>
-          <input class="govuk-input na-search__input" id="search" name="search" type="search" value="Coal" aria-describedby="search-hint">
+          <input class="govuk-input na-search__input" id="search" name="search" type="search" value="Department" aria-describedby="search-hint">
         </div>
         <button class="govuk-button na-search__button" data-module="govuk-button">
           Search
@@ -190,7 +190,7 @@
 {{ govukPagination({
 
   next: {
-    href: "search-results-create-work-set-2"
+    href: "#"
   },
   items: [
     {
@@ -200,13 +200,43 @@
     },
     {
       number: 2,
-      href: "search-results-create-work-set-2"
+     
+      href: "#"
+    },
+    {
+      number: 3,
+     
+      href: "#"
+    },
+    {
+      number: 4,
+     
+      href: "#"
+    },
+    {
+      number: 5,
+     
+      href: "#"
+    },
+    {
+      ellipsis: true
+    },
+    {
+      number: 9,
+    
+      href: "#"
+    },
+    {
+      number: 10,
+    
+      href: "#"
     }
+ 
   ]
 }) }}
 
 
-<form action="edit-record"  method="post">
+<form action=""  method="post">
   {% from "govuk/components/button/macro.njk" import govukButton %}
 {{ govukButton({
   text: "Continue"
