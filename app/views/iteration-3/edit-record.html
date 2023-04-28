@@ -6,14 +6,34 @@
 
 {% block beforeContent %}
 
-  <a class="govuk-back-link"
-  href="javascript:history.back()">Back</a>
+
 {% endblock %}
 
 {% block content %}
-<div class="govuk-grid-row" id="top">
+
+
+<div class="govuk-grid-row">
   <div class="govuk-grid-column-three-quarters main-with-nav">
 
+    {{ govukBreadcrumbs({
+  collapseOnMobile: true,
+  items: [
+    {
+      text: "Dashboard",
+      href: "dashboard"
+    },
+    {
+      text: "View Work Set",
+      href:"view-work-set"
+     
+    },
+    {
+      text: "Edit record"
+    
+     
+    }
+  ]
+}) }}
 <h1 class="govuk-heading-l">COAL 80/80/1</h1>
 <h2 class="govuk-heading-m">PAC-ID: COAL.2022.V5RJW.P Physical Record</h2>
 <p class="govuk-body">Series: National Coal Board and predecessors: Photographs</p>

@@ -9,10 +9,23 @@
 
 {% block content %}
 
+{{ govukBreadcrumbs({
+  collapseOnMobile: true,
+  items: [
+    {
+      text: "Dashboard",
+      href: "dashboard"
+    },
+    {
+      text: "View Work Set"
+     
+    }
+  ]
+}) }}
 
 <div class="na-notification-bar govuk-!-margin-bottom-9">
   <div class="na-notification-text">
-      <p class="na-notification-text">Coal 80/80/81 removed from Work Set</p>
+      <p class="na-notification-text">10 records removed from Work Set</p>
   </div>
   <a class="btn btn-close" href="view-work-set">Close</a>
 </div>
