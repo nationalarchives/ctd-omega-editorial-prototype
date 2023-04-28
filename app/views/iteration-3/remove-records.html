@@ -23,22 +23,52 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
+    {{ govukBreadcrumbs({
+      collapseOnMobile: true,
+      items: [
+        {
+          text: "Dashboard",
+          href: "dashboard"
+        },
+        {
+          text: "View Work Set",
+          href: "view-work-set"
+         
+        }
+        ,
+        {
+          text: "Remove selected records"
+        
+        }
+      ]
+    }) }}
 
-<form class="form" action="view-work-set-removed-message" method="post">
+
   <span class="govuk-caption-xl">COAL 80 Sample</span>
       <h1 class="govuk-heading-l">
         Remove records from Work Set
       </h1>
-   <p class="govuk-body">9 record selected</p>
+   <p class="govuk-body">Displaying 1 - 10 of 12 records</p>
 
-   <table class="govuk-table" data-module="moj-sortable-table">
+   <table class="govuk-table sortable govuk-!-font-size-16">
     <caption class="govuk-table__caption govuk-table__caption--s">National Coal Board and Predecessors: Photographs
   
     <thead class="govuk-table__head">
       <tr class="govuk-table__row">
-        <th scope="col" class="govuk-table__header app-custom-class" aria-sort="ascending">CCR</th>
-        <th scope="col" class="govuk-table__header app-custom-class" aria-sort="ascending">Description</th>
-        <th scope="col" class="govuk-table__header app-custom-class" aria-sort="ascending">Covering dates</th>
+        <th scope="col" class="govuk-table__header app-custom-class table-col-s" aria-sort="ascending">
+          <button> 
+            <span aria-hidden="true"></span>
+          </button>  CCR</th>
+        <th scope="col" class="govuk-table__header app-custom-class table-col-l" aria-sort="ascending">
+          <button> 
+            <span aria-hidden="true"></span>
+          </button> Description</th>
+        <th scope="col" class="govuk-table__header app-custom-class table-col-s" aria-sort="ascending">
+           Covering dates
+           <button> 
+            <span aria-hidden="true"></span>
+          </button>
+          </th>
        
 
       </tr>
@@ -57,7 +87,7 @@
       <tr class="govuk-table__row">
         <td class="govuk-table__cell">
          
-           COAL 80/80/1
+           COAL 67/80/1
         
       </td>
         <td class="govuk-table__cell govuk-!-padding-top-4">Bedlington colliery, Newcastle Upon Tyne, Photograph depicting: view of pithead baths.</td>
@@ -67,7 +97,7 @@
       <tr class="govuk-table__row">
         <td class="govuk-table__cell">
          
-           COAL 80/80/1
+           COAL 77/80/1
         
       </td>
         <td class="govuk-table__cell govuk-!-padding-top-4">Bedlington colliery, Newcastle Upon Tyne, Photograph depicting: view of pithead baths.</td>
@@ -77,7 +107,7 @@
       <tr class="govuk-table__row">
         <td class="govuk-table__cell">
          
-           COAL 80/80/1
+           COAL 85/79/1
         
       </td>
         <td class="govuk-table__cell govuk-!-padding-top-4">Bedlington colliery, Newcastle Upon Tyne, Photograph depicting: view of pithead baths.</td>
@@ -87,7 +117,7 @@
       <tr class="govuk-table__row">
         <td class="govuk-table__cell">
          
-           COAL 80/80/1
+           COAL 67/82/1
         
       </td>
         <td class="govuk-table__cell govuk-!-padding-top-4">Bedlington colliery, Newcastle Upon Tyne, Photograph depicting: view of pithead baths.</td>
@@ -97,7 +127,7 @@
       <tr class="govuk-table__row">
         <td class="govuk-table__cell">
          
-           COAL 80/80/1
+           COAL 81/80/2
         
       </td>
         <td class="govuk-table__cell govuk-!-padding-top-4">Bedlington colliery, Newcastle Upon Tyne, Photograph depicting: view of pithead baths.</td>
@@ -107,7 +137,7 @@
       <tr class="govuk-table__row">
         <td class="govuk-table__cell">
          
-           COAL 80/80/1
+           COAL 59/80/4
         
       </td>
         <td class="govuk-table__cell govuk-!-padding-top-4">Bedlington colliery, Newcastle Upon Tyne, Photograph depicting: view of pithead baths.</td>
@@ -117,7 +147,7 @@
       <tr class="govuk-table__row">
         <td class="govuk-table__cell">
          
-           COAL 80/80/1
+           COAL 28/67/8
         
       </td>
         <td class="govuk-table__cell govuk-!-padding-top-4">Bedlington colliery, Newcastle Upon Tyne, Photograph depicting: view of pithead baths.</td>
@@ -127,7 +157,7 @@
       <tr class="govuk-table__row">
         <td class="govuk-table__cell">
          
-           COAL 80/80/1
+           COAL 12/20/3
         
       </td>
         <td class="govuk-table__cell govuk-!-padding-top-4">Bedlington colliery, Newcastle Upon Tyne, Photograph depicting: view of pithead baths.</td>
@@ -137,7 +167,7 @@
       <tr class="govuk-table__row">
         <td class="govuk-table__cell">
          
-           COAL 80/80/1
+           COAL 24/10/4
         
       </td>
         <td class="govuk-table__cell govuk-!-padding-top-4">Bedlington colliery, Newcastle Upon Tyne, Photograph depicting: view of pithead baths.</td>
@@ -148,8 +178,8 @@
   </table>
 
   {{ govukPagination({
-    previous: {
-      href: "search-results-add-work-set"
+    next: {
+      href: "#"
     },
     items: [
       {
@@ -165,6 +195,8 @@
     
     ]
   }) }}
+
+  <form class="form" action="view-work-set-removed-message" method="post">
 
   {% from "govuk/components/radios/macro.njk" import govukRadios %}
 {{ govukRadios({

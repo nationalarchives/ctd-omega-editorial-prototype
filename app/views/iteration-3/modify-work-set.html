@@ -13,7 +13,25 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+    {{ govukBreadcrumbs({
+      collapseOnMobile: true,
+      items: [
+        {
+          text: "Dashboard",
+          href: "dashboard"
+        },
+        {
+          text: "View Work Set",
+          href: "view-work-set"
+         
+        }
+        ,
+        {
+          text: "Modify Work Set details"
+        
+        }
+      ]
+    }) }}
 
 <form class="form" action="view-work-set" method="post">
   <fieldset class="govuk-fieldset">
@@ -33,7 +51,7 @@
       <label class="govuk-label govuk-label--s" for="sort">
         Owner (person who will be assigned this work set on creation)
       </label>
-      <select class="govuk-select" id="sort" name="sort">
+      <select class="govuk-select" id="sort" name="sort" disabled>
         <option value="published">Assigned to you (Sarah Brown)</option>
         <option value="published">Meera Syal</option> 
        <option value="published">John Hedges</option> 
@@ -47,7 +65,7 @@
       name: "with-hint",
       id: "with-hint",
       rows: 5,
-      value:"Piece: COAL 80/80 - Bedlington 'D' Colliery, Newcastle Upon Tyne. Described at item level.",
+      value:"Work Set to check covering dates",
       maxlength: 250,
       label: {
         text: "Work Set description (optional)",
