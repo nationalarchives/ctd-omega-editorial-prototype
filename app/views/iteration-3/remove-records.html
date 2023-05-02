@@ -196,12 +196,12 @@
     ]
   }) }}
 
-  <form class="form" action="view-work-set-removed-message" method="post">
+  <form class="form" action="removeWorkSetAction" method="post">
 
   {% from "govuk/components/radios/macro.njk" import govukRadios %}
 {{ govukRadios({
   classes: "govuk-radios--inline",
-  name: "changed-name",
+  name: "removeWorkSet",
   fieldset: {
     legend: {
       text: "Are you sure you want to remove the selected records?",
@@ -211,11 +211,11 @@
 
   items: [
     {
-      value: "yes",
+      value: "Yes",
       text: "Yes"
     },
     {
-      value: "no",
+      value: "No",
       text: "No"
     }
   ]

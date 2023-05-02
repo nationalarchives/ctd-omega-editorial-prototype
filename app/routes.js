@@ -391,4 +391,15 @@ router.post('/iteration-3/abandonWorkSetAction', function (req, res) {
 
 })
 
+router.post('/iteration-3/removeWorkSetAction', function (req, res) {
+
+  var removeWorkSet = req.session.data['removeWorkSet']
+  if (removeWorkSet == 'Yes'){
+    res.redirect('view-work-set-removed-message')
+  } else {
+    res.redirect('view-work-set')
+  }
+
+})
+
 module.exports = router

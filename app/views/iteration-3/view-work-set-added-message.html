@@ -10,6 +10,19 @@
 {% block content %}
 
 
+{{ govukBreadcrumbs({
+  collapseOnMobile: true,
+  items: [
+    {
+      text: "Dashboard",
+      href: "dashboard"
+    },
+    {
+      text: "View Work Set"
+     
+    }
+  ]
+}) }}
 <div class="na-notification-bar govuk-!-margin-bottom-9">
   <div class="na-notification-text">
       <p class="na-notification-text"> 15 Records added to Work Set</p>

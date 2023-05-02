@@ -4,6 +4,11 @@
   Browse Edit Set – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
+
+
+
+{% block content %}
+
 {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
 
 {{ govukBreadcrumbs({
@@ -19,9 +24,6 @@
     }
   ]
 }) }}
-
-
-{% block content %}
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 
@@ -49,7 +51,7 @@
         <div class="govuk-grid-column-full">
 
           <h1 class="govuk-heading-l govuk-!-margin-top-8" id="tblDesc"><span class="govuk-caption-l">Select records for a new Work Set</span>Search results</h1>
-      <p class="govuk-body">Displaying 51 - 100 of 1000 results</p>
+      <p class="govuk-body">Displaying 11 - 16 of 16 results</p>
 
     <div class="govuk-checkboxes__item govuk-checkboxes--small">
       <input class="govuk-checkboxes__input" id="selectAll" name="selectAll" type="checkbox" value="selectAll">
