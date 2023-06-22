@@ -1,7 +1,7 @@
 {% extends "../layout_unbranded.html" %}
 
 {% block pageTitle %}
-  Browse Edit Set – {{ serviceName }} – GOV.UK Prototype Kit
+  Add creators
 {% endblock %}
 
 
@@ -235,14 +235,17 @@
   ]
 }) }}
 
-
-<form class="form" action="edit-record" method="post">
-  {% from "govuk/components/button/macro.njk" import govukButton %}
-{{ govukButton({
-  text: "Continue"
-}) }}
-</form>
-</div>
+    <form class="form" action="edit-record#access" method="post">
+      <div class="govuk-button-group">
+      <button class="govuk-button" data-module="govuk-button" name="action" value="save">
+        Continue
+      </button>
+        <a class="govuk-link govuk-link--secondary" href="edit-record#access">
+          Cancel
+        </a>
+      </div>
+    </form>
+  </div>
 </div>
 {% endblock %}
 

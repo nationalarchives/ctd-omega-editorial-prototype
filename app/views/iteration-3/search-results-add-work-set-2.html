@@ -1,7 +1,7 @@
 {% extends "../layout_unbranded.html" %}
 
 {% block pageTitle %}
-  Browse Edit Set – {{ serviceName }} – GOV.UK Prototype Kit
+  Search: Add records to existing Work Set
 {% endblock %}
 
 
@@ -177,11 +177,14 @@
 }) }}
 
 <form action="view-work-set-added-message"  method="post">
-{% from "govuk/components/button/macro.njk" import govukButton %}
-{{ govukButton({
-  text: "Continue"
-}) }}
-
+  <div class="govuk-button-group">
+    <button class="govuk-button" data-module="govuk-button" name="action" value="save">
+      Continue
+    </button>
+    <a class="govuk-link govuk-link--secondary" href="view-work-set">
+      Cancel
+    </a>
+  </div>
 </form>
 </div>
 </div>
